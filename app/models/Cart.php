@@ -1,4 +1,5 @@
 <?php
+
 class Cart {
     private $conn;
     private $table = "cart";
@@ -8,16 +9,45 @@ class Cart {
     }
 
     public function addToCart($userId, $productId, $quantity) {
-        $query = "INSERT INTO $this->table (userID, productID, quantity) VALUES (?, ?, ?)";
-        $stmt = $this->conn->prepare($query);
-        return $stmt->execute([$userId, $productId, $quantity]);
+        // Check if item already exists
+        $checkQuery = "SELECT quantity FROM $this->table WHERE userID = ? AND productID = ?";
+        $checkStmt = $this->conn->prepare($checkQuery);
+        $checkStmt->execute([$userId, $productId]);
+
+        if ($checkStmt->rowCount() > 0) {
+            $existing = $checkStmt->fetch();
+            $newQuantity = $existing['quantity'] + $quantity;
+            $updateQuery = "UPDATE $this->table SET quantity = ? WHERE userID = ? AND productID = ?";
+            $updateStmt = $this->conn->prepare($updateQuery);
+            return $updateStmt->execute([$newQuantity, $userId, $productId]);
+        } else {
+            $query = "INSERT INTO $this->table (userID, productID, quantity) VALUES (?, ?, ?)";
+            $stmt = $this->conn->prepare($query);
+            return $stmt->execute([$userId, $productId, $quantity]);
+        }
     }
 
-    public function getUserCart($userId) {
-        $query = "SELECT * FROM $this->table WHERE userID = ?";
+    public function getUserCartWithDetails($userId) {
+        $query = "
+            SELECT 
+                p.id as productID, 
+                p.description, 
+                p.image, 
+                p.price, 
+                c.quantity
+            FROM cart c
+            JOIN product p ON c.productID = p.id
+            WHERE c.userID = ?";
+        
         $stmt = $this->conn->prepare($query);
         $stmt->execute([$userId]);
-        return $stmt;
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+    public function updateCart($userId, $productId, $quantity) {
+        $query = "UPDATE $this->table SET quantity = ? WHERE userID = ? AND productID = ?";
+        $stmt = $this->conn->prepare($query);
+        return $stmt->execute([$quantity, $userId, $productId]);
     }
 
     public function removeItem($userId, $productId) {

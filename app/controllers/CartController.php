@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controllers;
 
 use App\Models\Cart;
@@ -8,32 +7,28 @@ class CartController
 {
     protected $cartModel;
 
-    public function __construct()
+    public function __construct($db)
     {
-        $this->cartModel = new Cart();
+        $this->cartModel = new Cart($db);
     }
 
     public function addToCart($userId, $productId, $quantity)
     {
-        // Logic to add item to cart
-        return $this->cartModel->addItem($userId, $productId, $quantity);
+        return $this->cartModel->addToCart($userId, $productId, $quantity);
     }
 
     public function getCart($userId)
     {
-        // Logic to get user's cart
-        return $this->cartModel->getItems($userId);
+        return $this->cartModel->getUserCartWithDetails($userId);
     }
 
     public function updateCart($userId, $productId, $quantity)
     {
-        // Logic to update item quantity in cart
-        return $this->cartModel->updateItem($userId, $productId, $quantity);
+        return $this->cartModel->updateCart($userId, $productId, $quantity);
     }
 
     public function removeFromCart($userId, $productId)
     {
-        // Logic to remove item from cart
         return $this->cartModel->removeItem($userId, $productId);
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+// cart.php - Model for handling cart operations
+
 class Cart {
     private $conn;
     private $table = "cart";
@@ -55,4 +57,6 @@ class Cart {
         $stmt = $this->conn->prepare($query);
         return $stmt->execute([$userId, $productId]);
     }
+
 }
+

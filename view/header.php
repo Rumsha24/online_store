@@ -40,6 +40,6 @@
     <a href="/online_store/view/products.php">Products</a>
     <a href="/online_store/view/comments.php">Comments</a>
     <a href="/online_store/view/login.php">Login</a>
-    <a href="/online_store/view/signup.php">Signup</a>
+    <a href="/online_store/view/order.php">Orders</a>
     <a href="/online_store/view/cart.php">Cart</a>
 </nav>

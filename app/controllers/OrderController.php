@@ -3,29 +3,48 @@
 namespace App\Controllers;
 
 use App\Models\Order;
+use Exception;
 
 class OrderController
 {
-    public function createOrder($request)
+    public function createOrder(array $request): Order
     {
-        // Logic to create an order
-        $order = new Order();
-        // Set order properties from request
-        // Save order to database
+        try {
+            $this->validateOrderRequest($request);
+            
+            $order = new Order();
+            $order->fill($request);
+            $order->save();
+            
+            return $order;
+        } catch (Exception $e) {
+            // Log error
+            throw $e;
+        }
     }
 
-    public function getOrder($orderId)
+    public function getOrder(int $orderId): Order
     {
-        // Logic to retrieve an order by ID
         $order = Order::find($orderId);
-        // Return order details
+        
+        if (!$order) {
+            throw new Exception("Order not found");
+        }
+        
+        return $order;
     }
 
-    public function cancelOrder($orderId)
+    public function cancelOrder(int $orderId): Order
     {
-        // Logic to cancel an order
-        $order = Order::find($orderId);
-        // Update order status to canceled
-        // Save changes to database
+        $order = $this->getOrder($orderId);
+        $order->status = 'cancelled';
+        $order->save();
+        
+        return $order;
+    }
+    
+    private function validateOrderRequest(array $request): void
+    {
+        // Implementation of validation logic
     }
 }

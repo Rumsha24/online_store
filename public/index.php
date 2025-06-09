@@ -10,6 +10,7 @@ require_once '../app/controllers/UserController.php';
 require_once '../app/controllers/ProductController.php';
 require_once '../app/controllers/CommentController.php';
 
+
 // Change default route to user/showSignupForm for signup as default page
 $url = isset($_GET['url']) ? $_GET['url'] : 'home/index';
 $url = explode('/', filter_var(rtrim($url, '/'), FILTER_SANITIZE_URL));

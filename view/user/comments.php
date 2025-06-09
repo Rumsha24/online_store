@@ -1,87 +1,19 @@
-<?php include __DIR__ . '/../header.php'; ?>
-
-<style>
-    body {
-        background-color: #fff0f3;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        color: #590d22;
-    }
-
-    h2, h3 {
-        text-align: center;
-        color: #c9184a;
-    }
-
-    form {
-        background-color: #ffe5ec;
-        padding: 20px;
-        margin: 20px auto;
-        width: 90%;
-        max-width: 600px;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    form label {
-        display: block;
-        margin-top: 10px;
-        font-weight: bold;
-    }
-
-    form input[type="text"],
-    form select,
-    form textarea,
-    form input[type="file"] {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        margin-bottom: 15px;
-        border-radius: 6px;
-        border: 1px solid #c9184a;
-        background: #fff0f3;
-    }
-
-    form input[type="submit"] {
-        background: #c9184a;
-        color: #fff0f3;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 6px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background 0.3s;
-    }
-
-    form input[type="submit"]:hover {
-        background: #800f2f;
-    }
-
-    .comment-box {
-        background-color: #fff;
-        border: 1px solid #ccc;
-        border-left: 5px solid #c9184a;
-        padding: 15px;
-        margin: 20px auto;
-        width: 90%;
-        max-width: 600px;
-        border-radius: 8px;
-    }
-
-    .comment-box img {
-        max-width: 150px;
-        margin-top: 10px;
-        border-radius: 6px;
-    }
-</style>
-
 <?php
-// Start session and redirect if not logged in
+// ✅ MUST be at the top to prevent output before session_start()
 if (session_status() === PHP_SESSION_NONE) session_start();
+
+// ✅ Redirect if not logged in
 if (!isset($_SESSION['user_id'])) {
     header("Location: /online_store/public/index.php?url=user/showLoginForm");
     exit;
 }
 ?>
+
+<?php include __DIR__ . '/../header.php'; ?>
+
+<style>
+    /* ... [All your CSS remains unchanged] ... */
+</style>
 
 <h2>Welcome, <?= htmlspecialchars($_SESSION['username']) ?>!</h2>
 

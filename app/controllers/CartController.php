@@ -3,38 +3,26 @@ namespace App\Controllers;
 
 use App\Models\Cart;
 
-class CartController
-{
-    // Cart model instance
+class CartController {
     protected $cartModel;
 
-    // Initialize Cart model with database connection
-    public function __construct($db)
-    {
+    public function __construct($db) {
         $this->cartModel = new Cart($db);
     }
 
-    // Add item to cart
-    public function addToCart($userId, $productId, $quantity)
-    {
+    public function addToCart($userId, $productId, $quantity) {
         return $this->cartModel->addToCart($userId, $productId, $quantity);
     }
 
-    // Get all cart items for a user
-    public function getCart($userId)
-    {
+    public function getCart($userId) {
         return $this->cartModel->getUserCartWithDetails($userId);
     }
 
-    // Update quantity of an item in the cart
-    public function updateCart($userId, $productId, $quantity)
-    {
+    public function updateCart($userId, $productId, $quantity) {
         return $this->cartModel->updateCart($userId, $productId, $quantity);
     }
 
-    // Remove item from cart
-    public function removeFromCart($userId, $productId)
-    {
+    public function removeFromCart($userId, $productId) {
         return $this->cartModel->removeItem($userId, $productId);
     }
 }

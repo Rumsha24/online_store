@@ -1,6 +1,5 @@
 <?php
-
-// cart.php - Model for handling cart operations
+namespace App\Models;
 
 class Cart {
     private $conn;
@@ -11,7 +10,6 @@ class Cart {
     }
 
     public function addToCart($userId, $productId, $quantity) {
-        // Check if item already exists
         $checkQuery = "SELECT quantity FROM $this->table WHERE userID = ? AND productID = ?";
         $checkStmt = $this->conn->prepare($checkQuery);
         $checkStmt->execute([$userId, $productId]);
@@ -32,13 +30,13 @@ class Cart {
     public function getUserCartWithDetails($userId) {
         $query = "
             SELECT 
-                p.id as productID, 
+                p.productID,
                 p.description, 
                 p.image, 
                 p.price, 
                 c.quantity
             FROM cart c
-            JOIN product p ON c.productID = p.id
+            JOIN products p ON c.productID = p.productID
             WHERE c.userID = ?";
         
         $stmt = $this->conn->prepare($query);
@@ -57,6 +55,4 @@ class Cart {
         $stmt = $this->conn->prepare($query);
         return $stmt->execute([$userId, $productId]);
     }
-
 }
-

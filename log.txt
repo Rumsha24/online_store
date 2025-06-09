@@ -1,2 +1,12 @@
 Login attempt: rumsha36@gmail.com
 Login successful for user ID: 5
+Login attempt: bhullar@gmail.com
+Input password: 123
+Stored hash: $2y$10$nC531zMvzJkC03Y75Y4dK.W0PNAB.461PThNnY/3.M2wgzko1o3Iq
+Verify result: true
+Login successful for user ID: 2
+Login attempt: anmoldeepbhullar96@gmail.com
+Input password: 123
+Stored hash: $2y$10$2zma2rlGwjfMBrEXcTixCuEDGYKQDB3pKEyqlKj/K2tImXA2vlMyK
+Verify result: true
+Login successful for user ID: 7

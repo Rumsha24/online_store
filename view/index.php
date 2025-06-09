@@ -25,14 +25,18 @@ $product = $controller->getSingleProduct();
         color: #800f2f;
     }
     .hero-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 24px;
+        padding: 16px 0;
         background: #ffb3c1;
-        padding: 40px 40px 40px 40px;
     }
     .hero-section img {
-        border-radius: 12px;
-        box-shadow: 0 4px 16px rgba(89,13,34,0.10);
-        max-width: 100%;
+        max-width: 320px;
         height: auto;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(89,13,34,0.10);
     }
     .why-shop {
         background: #ffccd5;
@@ -137,44 +141,40 @@ $product = $controller->getSingleProduct();
     <img src="../images/1.jpg" alt="Elegant perfume bottles on display" style="max-width:100%; height:auto;" />
 </div>
 
-<!-- About Us -->
-<div class="why-shop" style="text-align:center;">
-    <h2>About Us</h2>
-    <p style="color:#800f2f;">
-        <strong>Passion Meets Perfume</strong><br>
-        Founded on a love for timeless elegance and aromatic beauty, <strong>[Your Brand Name]</strong> brings you artisanal fragrances inspired by nature, culture, and emotion. We believe a great scent doesn’t just smell good – it tells your story.
-    </p>
-</div>
-
-<!-- Our Collection -->
-<div class="why-shop" style="text-align:center;">
-    <h2>Our Collection</h2>
-    <p style="color:#800f2f;">
-        <strong>For Him, For Her, For All</strong><br>
-        Explore our signature collections designed for every mood, moment, and memory.
-    </p>
-    <ul style="list-style:none; padding:0; color:#590d22;">
-        <li style="margin-bottom:10px;"><strong>Eternal Bloom</strong> – A floral symphony that captures spring in a bottle</li>
-        <li style="margin-bottom:10px;"><strong>Midnight Oud</strong> – A deep, woody blend for a bold statement</li>
-        <li style="margin-bottom:10px;"><strong>Citrus Muse</strong> – Fresh, zesty, and endlessly energizing</li>
-    </ul>
-</div>
-
-<!-- Why Choose Us -->
-<div class="why-shop" style="text-align:center;">
-    <h2>Why Choose Us?</h2>
-    <ul style="list-style:none; padding:0;">
-        <li style="margin-bottom:10px;">💎 <strong>Premium Ingredients</strong> sourced from around the world</li>
-        <li style="margin-bottom:10px;">👃 <strong>Crafted by Master Perfumers</strong></li>
-        <li style="margin-bottom:10px;">🌱 <strong>Cruelty-Free and Eco-Conscious</strong></li>
-    </ul>
-</div>
-
-<!-- Customer Testimonials -->
-<div class="why-shop" style="text-align:center;">
-    <h2>Customer Testimonials</h2>
-    <p style="font-style:italic; color:#a4133c;">“The scent stays all day and makes me feel confident every time I wear it.”<br><span style="color:#590d22;">– Julia M.</span></p>
-    <p style="font-style:italic; color:#a4133c;">“A perfect gift for my partner – elegant and unforgettable.”<br><span style="color:#590d22;">– Marc T.</span></p>
+<!-- Four sections in a row: About Us, Our Collection, Why Choose Us, Customer Testimonials -->
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 32px; margin-bottom: 40px;">
+    <div class="why-shop" style="flex:1 1 220px; min-width:200px; max-width:300px; text-align:center;">
+        <h2>About Us</h2>
+        <p style="color:#800f2f;">
+            <strong>Passion Meets Perfume</strong><br>
+            Founded on a love for timeless elegance and aromatic beauty, <strong>[Your Brand Name]</strong> brings you artisanal fragrances inspired by nature, culture, and emotion. We believe a great scent doesn't just smell good – it tells your story.
+        </p>
+    </div>
+    <div class="why-shop" style="flex:1 1 220px; min-width:200px; max-width:300px; text-align:center;">
+        <h2>Our Collection</h2>
+        <p style="color:#800f2f;">
+            <strong>For Him, For Her, For All</strong><br>
+            Explore our signature collections designed for every mood, moment, and memory.
+        </p>
+        <ul style="list-style:none; padding:0; color:#590d22;">
+            <li style="margin-bottom:10px;"><strong>Eternal Bloom</strong> – A floral symphony that captures spring in a bottle</li>
+            <li style="margin-bottom:10px;"><strong>Midnight Oud</strong> – A deep, woody blend for a bold statement</li>
+            <li style="margin-bottom:10px;"><strong>Citrus Muse</strong> – Fresh, zesty, and endlessly energizing</li>
+        </ul>
+    </div>
+    <div class="why-shop" style="flex:1 1 220px; min-width:200px; max-width:300px; text-align:center;">
+        <h2>Why Choose Us?</h2>
+        <ul style="list-style:none; padding:0;">
+            <li style="margin-bottom:10px;">💎 <strong>Premium Ingredients</strong> sourced from around the world</li>
+            <li style="margin-bottom:10px;">👃 <strong>Crafted by Master Perfumers</strong></li>
+            <li style="margin-bottom:10px;">🌱 <strong>Cruelty-Free and Eco-Conscious</strong></li>
+        </ul>
+    </div>
+    <div class="why-shop" style="flex:1 1 220px; min-width:200px; max-width:300px; text-align:center;">
+        <h2>Customer Testimonials</h2>
+        <p style="font-style:italic; color:#a4133c;">"The scent stays all day and makes me feel confident every time I wear it."<br><span style="color:#590d22;">– Julia M.</span></p>
+        <p style="font-style:italic; color:#a4133c;">"A perfect gift for my partner – elegant and unforgettable."<br><span style="color:#590d22;">– Marc T.</span></p>
+    </div>
 </div>
 
 <!-- Featured Perfumes -->

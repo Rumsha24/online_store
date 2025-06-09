@@ -1,7 +1,7 @@
-CREATE DATABASE ecommerce;
-
+CREATE DATABASE IF NOT EXISTS ecommerce;
 USE ecommerce;
 
+-- USERS
 CREATE TABLE users (
     userID INT AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(100) UNIQUE,
@@ -10,6 +10,7 @@ CREATE TABLE users (
     shippingAddress TEXT
 );
 
+-- PRODUCTS
 CREATE TABLE products (
     productID INT AUTO_INCREMENT PRIMARY KEY,
     description TEXT,
@@ -18,6 +19,7 @@ CREATE TABLE products (
     shippingCost DECIMAL(10, 2)
 );
 
+-- COMMENTS
 CREATE TABLE comments (
     commentID INT AUTO_INCREMENT PRIMARY KEY,
     productID INT,
@@ -29,15 +31,18 @@ CREATE TABLE comments (
     FOREIGN KEY (userID) REFERENCES users(userID)
 );
 
+-- CART
 CREATE TABLE cart (
     cartID INT AUTO_INCREMENT PRIMARY KEY,
     userID INT,
     productID INT,
     quantity INT,
     FOREIGN KEY (userID) REFERENCES users(userID),
-    FOREIGN KEY (productID) REFERENCES products(productID)
+    FOREIGN KEY (productID) REFERENCES products(productID),
+    UNIQUE KEY unique_user_product (userID, productID)
 );
 
+-- ORDERS
 CREATE TABLE orders (
     orderID INT AUTO_INCREMENT PRIMARY KEY,
     userID INT,
@@ -45,3 +50,11 @@ CREATE TABLE orders (
     totalAmount DECIMAL(10,2),
     FOREIGN KEY (userID) REFERENCES users(userID)
 );
+
+-- Sample data for testing
+INSERT INTO users (email, password, username, shippingAddress) VALUES
+('test@example.com', 'testpass123', 'TestUser', '123 Main St');
+
+INSERT INTO products (description, image, price, shippingCost) VALUES
+('Wireless Mouse', 'images/mouse.jpg', 29.99, 5.00),
+('Gaming Keyboard', 'images/keyboard.jpg', 79.99, 7.00);

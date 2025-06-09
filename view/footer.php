@@ -218,7 +218,7 @@
         </div>
         
         <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-            <img src="" alt="Amex" style="
+            <img src="/online_store/images/amex.jpeg" alt="Amex" style="
                 height: 28px;
                 background: #fff0f3;
                 border-radius: 4px;

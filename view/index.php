@@ -1,4 +1,5 @@
 <?php
+
 require_once __DIR__ . '/../app/controllers/ProductController.php';
 require_once __DIR__ . '/../app/core/Database.php';
 
@@ -56,14 +57,40 @@ $product = $controller->getSingleProduct();
     .featured-books-title {
         color: #c9184a;
         margin-bottom: 30px;
+        text-align: center;
     }
-    .books-row {
+    .perfumes-row {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
         max-width: 1000px;
         margin: 0 auto 40px auto;
+    }
+    .perfume-card {
+        flex: 0 0 30%;
+        box-sizing: border-box;
+        border: 1.5px solid #c9184a;
+        padding: 18px 12px 20px 12px;
+        text-align: center;
+        margin-bottom: 20px;
+        background: #ffb3c1;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(200,24,74,0.10);
+        color: #590d22;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .perfume-card:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 6px 24px rgba(255, 77, 109, 0.15);
+    }
+    .perfume-card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        border: 2px solid #ff4d6d;
+        background: #ffccd5;
     }
     .book-card {
         flex: 0 0 30%;
@@ -178,17 +205,137 @@ $product = $controller->getSingleProduct();
 </div>
 
 <!-- Featured Perfumes -->
-<h1 class="featured-books-title" style="text-align:center; color:#c9184a;">Featured Perfumes</h1>
-<div class="books-row">
-    <div class="book-card">
+<h1 class="featured-perfumes-title" style="text-align:center; color:#c9184a;">Featured Perfumes</h1>
+<div class="perfumes-row">
+    <div class="perfume-card">
         <img src="../images/5.jpg" alt="Eternal Bloom Perfume Bottle" />
     </div>
-    <div class="book-card">
+    <div class="perfume-card">
         <img src="../images/2.jpg" alt="Midnight Oud Perfume Bottle" />
     </div>
-    <div class="book-card">
+    <div class="perfume-card">
         <img src="../images/3.jpg" alt="Citrus Muse Perfume Bottle" />
     </div>
 </div>
 
+<!-- Top Perfume & Cologne Brands -->
+<h1 class="featured-perfumes-title" style="text-align:center; color:#c9184a;">Top Perfume & Cologne Brands</h1>
+<div class="perfumes-row" style="margin-bottom:40px;">
+    <div class="perfume-card" style="background:#fff0f3; border:1.5px solid #c9184a;">
+        <img src="../images/7.png" alt="Jean Paul Gaultier" style="height:110px; background:#fff0f3; border-radius:10px; padding:8px; border:none;">
+        <div style="font-weight:bold; color:#c9184a; margin-top:10px;">Jean Paul Gaultier</div>
+    </div>
+    <div class="perfume-card" style="background:#fff0f3; border:1.5px solid #c9184a;">
+        <img src="../images/9.jpg" alt="Versace" style="height:110px; background:#fff0f3; border-radius:10px; padding:8px; border:none;">
+        <div style="font-weight:bold; color:#c9184a; margin-top:10px;">Versace</div>
+    </div>
+    <div class="perfume-card" style="background:#fff0f3; border:1.5px solid #c9184a;">
+        <img src="../images/14.jpeg" alt="Giorgio Armani" style="height:110px; background:#fff0f3; border-radius:10px; padding:8px; border:none;">
+        <div style="font-weight:bold; color:#c9184a; margin-top:10px;">Giorgio Armani</div>
+    </div>
+    <div class="perfume-card" style="background:#fff0f3; border:1.5px solid #c9184a;">
+        <img src="../images/18.avif" alt="D&G" style="height:110px; background:#fff0f3; border-radius:10px; padding:8px; border:none;">
+        <div style="font-weight:bold; color:#c9184a; margin-top:10px;">D&G</div>
+    </div>
+    <div class="perfume-card" style="background:#fff0f3; border:1.5px solid #c9184a;">
+        <img src="../images/21.png" alt="Calvin Klein" style="height:110px; background:#fff0f3; border-radius:10px; padding:8px; border:none;">
+        <div style="font-weight:bold; color:#c9184a; margin-top:10px;">Calvin Klein</div>
+    </div>
+</div>
+<div style="text-align:center; margin-bottom:32px;">
+    <button style="background:#c9184a; color:#fff0f3; border:none; padding:10px 32px; border-radius:6px; font-weight:bold; letter-spacing:1px; cursor:pointer; box-shadow:0 2px 8px #ffb3c1;">VIEW ALL BRANDS</button>
+</div>
+
+<!-- New Arrivals -->
+<div style="padding:32px 0 0 0;">
+    <h2 style="text-align:center; color:#c9184a; letter-spacing:1px; font-size:1.2em; margin-bottom:18px; border-bottom:2px solid #ffb3c1; display:inline-block; width:100%;">NEW ARRIVALS</h2>
+    <div style="display:flex; justify-content:center; align-items:flex-end; gap:24px; flex-wrap:wrap;">
+        <div style="text-align:center; background:#fff0f3; border-radius:12px; padding:18px 12px; box-shadow:0 2px 8px #ffb3c1;">
+            <img src="../images/23.webp" alt="New Arrival 1" style="height:140px; border-radius:8px; border:2px solid #ffb3c1;">
+            <div style="font-weight:bold; color:#c9184a;">ARMAF</div>
+            <div style="color:#c9184a;">Now $59.99 CAD</div>
+            <div style="text-decoration:line-through; color:#aaa;">$89.99 CAD</div>
+        </div>
+        <div style="text-align:center; background:#fff0f3; border-radius:12px; padding:18px 12px; box-shadow:0 2px 8px #ffb3c1;">
+            <img src="../images/24.webp" alt="New Arrival 2" style="height:140px; border-radius:8px; border:2px solid #ffb3c1;">
+            <div style="font-weight:bold; color:#c9184a;">LATTAFA</div>
+            <div style="color:#c9184a;">Best Price</div>
+        </div>
+        <div style="text-align:center; background:#fff0f3; border-radius:12px; padding:18px 12px; box-shadow:0 2px 8px #ffb3c1;">
+            <img src="../images/25.jpg" alt="New Arrival 3" style="height:140px; border-radius:8px; border:2px solid #ffb3c1;">
+            <div style="font-weight:bold; color:#c9184a;">AZZARO</div>
+            <div style="color:#c9184a;">$47.95 CAD</div>
+        </div>
+        <div style="text-align:center; background:#fff0f3; border-radius:12px; padding:18px 12px; box-shadow:0 2px 8px #ffb3c1;">
+            <img src="../images/26.webp" alt="New Arrival 4" style="height:140px; border-radius:8px; border:2px solid #ffb3c1;">
+            <div style="font-weight:bold; color:#c9184a;">DOLCE & GABBANA</div>
+            <div style="color:#c9184a;">$134.95 CAD</div>
+        </div>
+    </div>
+    <div style="text-align:center; margin-top:18px;">
+        <button style="background:#c9184a; color:#fff0f3; border:none; padding:8px 28px; border-radius:6px; font-weight:bold; letter-spacing:1px; cursor:pointer; box-shadow:0 2px 8px #ffb3c1;">VIEW ALL NEW ARRIVALS</button>
+    </div>
+</div>
+
+<!-- Vintage Collection -->
+<div style="padding:32px 0 0 0;">
+    <h2 style="text-align:center; color:#c9184a; letter-spacing:1px; font-size:1.2em; margin-bottom:18px; border-bottom:2px solid #ffb3c1; display:inline-block; width:100%;">VINTAGE COLLECTION</h2>
+    <div style="display:flex; justify-content:center; align-items:flex-end; gap:24px; flex-wrap:wrap;">
+        <div style="text-align:center; background:#fff0f3; border-radius:12px; padding:18px 12px; box-shadow:0 2px 8px #ffb3c1;">
+            <img src="../images/27.webp" alt="Burberry brit edp" style="height:140px; border-radius:8px; border:2px solid #ffb3c1;">
+            <div style="font-weight:bold; color:#c9184a;">Burberry brit edp</div>
+            <div style="color:#c9184a;">$199.95 CAD</div>
+        </div>
+        <div style="text-align:center; background:#fff0f3; border-radius:12px; padding:18px 12px; box-shadow:0 2px 8px #ffb3c1;">
+            <img src="../images/28.webp" alt="Armani acqua di gio profondo" style="height:140px; border-radius:8px; border:2px solid #ffb3c1;">
+            <div style="font-weight:bold; color:#c9184a;">Armani acqua di gio profondo</div>
+            <div style="color:#c9184a;">$149.95 CAD</div>
+        </div>
+        <div style="text-align:center; background:#fff0f3; border-radius:12px; padding:18px 12px; box-shadow:0 2px 8px #ffb3c1;">
+            <img src="../images/29.webp" alt="Lolita lempicka" style="height:140px; border-radius:8px; border:2px solid #ffb3c1;">
+            <div style="font-weight:bold; color:#c9184a;">Lolita lempicka</div>
+            <div style="color:#c9184a;">$129.95 CAD</div>
+        </div>
+        <div style="text-align:center; background:#fff0f3; border-radius:12px; padding:18px 12px; box-shadow:0 2px 8px #ffb3c1;">
+            <img src="../images/30.webp" alt="Burberry weekend" style="height:140px; border-radius:8px; border:2px solid #ffb3c1;">
+            <div style="font-weight:bold; color:#c9184a;">Burberry weekend</div>
+            <div style="color:#c9184a;">$159.95 CAD</div>
+        </div>
+    </div>
+    <div style="text-align:center; margin-top:18px;">
+        <button style="background:#c9184a; color:#fff0f3; border:none; padding:8px 28px; border-radius:6px; font-weight:bold; letter-spacing:1px; cursor:pointer; box-shadow:0 2px 8px #ffb3c1;">VIEW ALL VINTAGE</button>
+    </div>
+</div>
+
+<!-- Clearance Sales -->
+<div style="padding:32px 0 40px 0;">
+    <h2 style="text-align:center; color:#c9184a; letter-spacing:1px; font-size:1.2em; margin-bottom:18px; border-bottom:2px solid #ffb3c1; display:inline-block; width:100%;">CLEARANCE SALES!</h2>
+    <div style="display:flex; justify-content:center; align-items:flex-end; gap:24px; flex-wrap:wrap;">
+        <div style="text-align:center; background:#fff0f3; border-radius:12px; padding:18px 12px; box-shadow:0 2px 8px #ffb3c1;">
+            <img src="../images/clear1.jpg" alt="Clearance 1" style="height:140px; border-radius:8px; border:2px solid #ffb3c1;">
+            <div style="font-weight:bold; color:#c9184a;">MALTESE</div>
+            <div style="color:#c9184a;">$49.75 CAD</div>
+        </div>
+        <div style="text-align:center; background:#fff0f3; border-radius:12px; padding:18px 12px; box-shadow:0 2px 8px #ffb3c1;">
+            <img src="../images/clear2.jpg" alt="Clearance 2" style="height:140px; border-radius:8px; border:2px solid #ffb3c1;">
+            <div style="font-weight:bold; color:#c9184a;">ALFRED SUNG</div>
+            <div style="color:#c9184a;">$32.95 CAD</div>
+        </div>
+        <div style="text-align:center; background:#fff0f3; border-radius:12px; padding:18px 12px; box-shadow:0 2px 8px #ffb3c1;">
+            <img src="../images/clear3.jpg" alt="Clearance 3" style="height:140px; border-radius:8px; border:2px solid #ffb3c1;">
+            <div style="font-weight:bold; color:#c9184a;">ESTEE LAUDER</div>
+            <div style="color:#c9184a;">$99.95 CAD</div>
+        </div>
+        <div style="text-align:center; background:#fff0f3; border-radius:12px; padding:18px 12px; box-shadow:0 2px 8px #ffb3c1;">
+            <img src="../images/clear4.jpg" alt="Clearance 4" style="height:140px; border-radius:8px; border:2px solid #ffb3c1;">
+            <div style="font-weight:bold; color:#c9184a;">JOOP!</div>
+            <div style="color:#c9184a;">$39.95 CAD</div>
+        </div>
+    </div>
+    <div style="text-align:center; margin-top:18px;">
+        <button style="background:#c9184a; color:#fff0f3; border:none; padding:8px 28px; border-radius:6px; font-weight:bold; letter-spacing:1px; cursor:pointer; box-shadow:0 2px 8px #ffb3c1;">VIEW ALL CLEARANCE SALES</button>
+    </div>
+</div>
+
+<!-- Footer include remains -->
 <?php include __DIR__ . '/footer.php'; ?>

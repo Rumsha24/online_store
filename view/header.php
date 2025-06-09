@@ -111,7 +111,7 @@
             <a href="/online_store/view/shopall.php">Shop All</a>
             <a href="/online_store/view/products.php">Vintage Collections</a>
             <a href="/online_store/view/new.php">New Arrivals</a>
-            <a href="/online_store/view/best.php">Best Seller</a>
+            <a href="/online_store/view/orders.php">Orders</a>
             <a href="/online_store/view/comments.php">Comments</a>
             <a href="/online_store/view/story.php">Our Story</a>
         </div>

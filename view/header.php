@@ -123,3 +123,12 @@
         </div>
     </div>
 </div>
+
+<nav>
+    <a href="/online_store/view/home/index.php">Home</a>
+    <a href="/online_store/view/user/products.php">Products</a>
+    <a href="/online_store/view/user/comments.php">Comments</a>
+    <a href="/online_store/view/user/login.php">Login</a>
+    <a href="/online_store/view/user/signup.php">Signup</a>
+    <a href="/online_store/view/user/cart.php">Cart</a>
+</nav>

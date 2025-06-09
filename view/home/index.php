@@ -83,6 +83,8 @@ if (!isset($_SESSION['user_id'])) {
 }
 ?>
 
+
+
 <h2>Welcome, <?= htmlspecialchars($_SESSION['username']) ?>!</h2>
 
 <?php $product = ['productID' => 1, 'description' => 'Sample Product']; ?>

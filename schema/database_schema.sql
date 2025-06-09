@@ -1,6 +1,6 @@
-CREATE DATABASE commerce;
+CREATE DATABASE ecommerce;
 
-USE commerce;
+USE ecommerce;
 
 CREATE TABLE users (
     userID INT AUTO_INCREMENT PRIMARY KEY,

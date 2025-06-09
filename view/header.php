@@ -36,10 +36,11 @@
 <body>
 
 <nav>
-    <a href="/ecommerce-store/ecommerce-api/view/index.php">Home</a>
-    <a href="/ecommerce-store/ecommerce-api/view/products.php">Products</a>
-    <a href="/ecommerce-store/ecommerce-api/view/comments.php">Comments</a>
-    <a href="/ecommerce-store/ecommerce-api/view/login.php">Login</a>
-    <a href="/ecommerce-store/ecommerce-api/view/signup.php">Signup</a>
-    <a href="/ecommerce-store/ecommerce-api/view/cart.php">Cart</a>
+    <a href="/online_store/view/home/index.php">Home</a>
+    <a href="/online_store/view/user/products.php">Products</a>
+    <a href="/online_store/view/user/comments.php">Comments</a>
+    <a href="/online_store/view/user/login.php">Login</a>
+    <a href="/online_store/view/user/signup.php">Signup</a>
+    <a href="/online_store/view/user/cart.php">Cart</a>
 </nav>
+

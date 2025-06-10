@@ -9,13 +9,13 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <style>
-        body {
-            background: #fff0f3;
-            color: #590d22;
-            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+         body {
+        background: #fff0f3;
+        color: #590d22;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
 
         .page-title {
             color: #c9184a;

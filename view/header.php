@@ -119,7 +119,7 @@
             <a href="/online_store/view/wishlist.php" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
             <a href="/online_store/view/search.php" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
             <a href="/online_store/view/user/login.php" title="Account"><i class="fa-regular fa-user"></i></a>
-            <a href="/online_store/view/cart/view.php" title="Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="/online_store/view/cart.php" title="Cart"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
     </div>
 </div>

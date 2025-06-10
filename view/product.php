@@ -177,7 +177,7 @@
         
         <!-- Product Card 2 -->
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Chanel No. 5" class="product-image">
+            <img src="/online_store/images/no .5 e.jpeg" alt="Chanel No. 5" class="product-image">
             <div class="brand-tag">CHANEL</div>
             <div class="product-info">
                 <h3 class="product-title">No. 5 Eau de Parfum</h3>
@@ -192,7 +192,7 @@
         <!-- Product Card 3 -->
         <div class="product-card">
             <div class="discount-badge">-20%</div>
-            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Burberry Her" class="product-image">
+            <img src="/online_store/images/london dream.jpeg" alt="Burberry Her" class="product-image">
             <div class="brand-tag">BURBERRY</div>
             <div class="product-info">
                 <h3 class="product-title">Her London Dream</h3>
@@ -206,7 +206,7 @@
         
         <!-- Product Card 4 -->
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Dior J'adore" class="product-image">
+            <img src="/online_store/images/jadore.jpeg" alt="Dior J'adore" class="product-image">
             <div class="brand-tag">DIOR</div>
             <div class="product-info">
                 <h3 class="product-title">J'adore Infinissime</h3>
@@ -220,7 +220,7 @@
         
         <!-- Product Card 5 -->
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Gucci Bloom" class="product-image">
+            <img src="/online_store/images/bloom aqua.jpeg" alt="Gucci Bloom" class="product-image">
             <div class="brand-tag">GUCCI</div>
             <div class="product-info">
                 <h3 class="product-title">Bloom Acqua di Fiori</h3>
@@ -235,7 +235,7 @@
         <!-- Product Card 6 -->
         <div class="product-card">
             <div class="discount-badge">-10%</div>
-            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="YSL Black Opium" class="product-image">
+            <img src="/online_store/images/black opium.jpeg" alt="YSL Black Opium" class="product-image">
             <div class="brand-tag">YVES SAINT LAURENT</div>
             <div class="product-info">
                 <h3 class="product-title">Black Opium</h3>
@@ -249,7 +249,7 @@
         
         <!-- Product Card 7 -->
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Marc Jacobs Daisy" class="product-image">
+            <img src="/online_store/images/Daisy Love.jpeg" alt="Marc Jacobs Daisy" class="product-image">
             <div class="brand-tag">MARC JACOBS</div>
             <div class="product-info">
                 <h3 class="product-title">Daisy Love</h3>
@@ -264,7 +264,7 @@
         <!-- Product Card 8 -->
         <div class="product-card">
             <div class="discount-badge">-25%</div>
-            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Prada Candy" class="product-image">
+            <img src="/online_store/images/Candy Gloss.png" alt="Prada Candy" class="product-image">
             <div class="brand-tag">PRADA</div>
             <div class="product-info">
                 <h3 class="product-title">Candy Gloss</h3>
@@ -278,7 +278,7 @@
         
         <!-- Product Card 9 -->
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Tom Ford Black Orchid" class="product-image">
+            <img src="/online_store/images/Black orchid.jpeg" alt="Tom Ford Black Orchid" class="product-image">
             <div class="brand-tag">TOM FORD</div>
             <div class="product-info">
                 <h3 class="product-title">Black Orchid</h3>
@@ -292,7 +292,7 @@
         
         <!-- Product Card 10 -->
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Jo Malone Wood Sage" class="product-image">
+            <img src="/online_store/images/Wood Sage & Sea Salt.jpeg" alt="Jo Malone Wood Sage" class="product-image">
             <div class="brand-tag">JO MALONE</div>
             <div class="product-info">
                 <h3 class="product-title">Wood Sage & Sea Salt</h3>
@@ -307,7 +307,7 @@
         <!-- Product Card 11 -->
         <div class="product-card">
             <div class="discount-badge">-15%</div>
-            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Armani Si" class="product-image">
+            <img src="/online_store/images/Si Passione.jpeg" alt="Armani Si" class="product-image">
             <div class="brand-tag">GIORGIO ARMANI</div>
             <div class="product-info">
                 <h3 class="product-title">Si Passione</h3>
@@ -321,7 +321,7 @@
         
         <!-- Product Card 12 -->
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Hermès Twilly" class="product-image">
+            <img src="/online_store/images/Twilly d'Hermès.jpeg" alt="Hermès Twilly" class="product-image">
             <div class="brand-tag">HERMÈS</div>
             <div class="product-info">
                 <h3 class="product-title">Twilly d'Hermès</h3>
@@ -335,7 +335,7 @@
         
         <!-- Product Card 13 -->
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Dolce&Gabbana Light Blue" class="product-image">
+            <img src="/online_store/images/Light Blue Intense.jpeg" alt="Dolce&Gabbana Light Blue" class="product-image">
             <div class="brand-tag">DOLCE&GABBANA</div>
             <div class="product-info">
                 <h3 class="product-title">Light Blue Intense</h3>
@@ -350,7 +350,7 @@
         <!-- Product Card 14 -->
         <div class="product-card">
             <div class="discount-badge">-30%</div>
-            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Lancôme La Vie Est Belle" class="product-image">
+            <img src="/online_store/images/La Vie Est Belle.jpeg" alt="Lancôme La Vie Est Belle" class="product-image">
             <div class="brand-tag">LANCÔME</div>
             <div class="product-info">
                 <h3 class="product-title">La Vie Est Belle</h3>
@@ -364,7 +364,7 @@
         
         <!-- Product Card 15 -->
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Viktor&Rolf Flowerbomb" class="product-image">
+            <img src="/online_store/images/flowerbomb.jpeg" alt="Viktor&Rolf Flowerbomb" class="product-image">
             <div class="brand-tag">VIKTOR&ROLF</div>
             <div class="product-info">
                 <h3 class="product-title">Flowerbomb Dew</h3>

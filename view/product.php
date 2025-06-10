@@ -203,7 +203,7 @@
 
         <!-- Product 2 -->
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Chanel No. 5" class="product-image" />
+            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Chanel No. 5" class="product-image">
             <div class="brand-tag">CHANEL</div>
             <div class="product-info">
                 <h3 class="product-title">No. 5 Eau de Parfum</h3>
@@ -220,7 +220,7 @@
         <!-- Product 3 -->
         <div class="product-card">
             <div class="discount-badge">-20%</div>
-            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Burberry Her" class="product-image" />
+            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Burberry Her" class="product-image">
             <div class="brand-tag">BURBERRY</div>
             <div class="product-info">
                 <h3 class="product-title">Her London Dream</h3>
@@ -236,18 +236,173 @@
 
         <!-- Product 4 -->
         <div class="product-card">
-            <div class="discount-badge">-20%</div>
-            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Burberry Her" class="product-image" />
-            <div class="brand-tag">BURBERRY</div>
+            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Dior J'adore" class="product-image">
+            <div class="brand-tag">DIOR</div>
             <div class="product-info">
-                <h3 class="product-title">Her London Dream</h3>
-                <p class="product-description">A vibrant fruity floral fragrance with notes of pear, blackcurrant, and jasmine.</p>
+                <h3 class="product-title">J'adore Infinissime</h3>
+                <p class="product-description">An intense floral bouquet with notes of jasmine, ylang-ylang, and Damascus rose.</p>
+                <div class="product-size">100ml Eau de Parfum</div>
+                <div class="product-price">$145.00</div>
+                <div class="product-rating">★★★★★ (4.9)</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product Card 5 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Gucci Bloom" class="product-image">
+            <div class="brand-tag">GUCCI</div>
+            <div class="product-info">
+                <h3 class="product-title">Bloom Acqua di Fiori</h3>
+                <p class="product-description">A green and floral fragrance with notes of honeysuckle, jasmine, and tuberose.</p>
+                <div class="product-size">50ml Eau de Parfum</div>
+                <div class="product-price">$98.00</div>
+                <div class="product-rating">★★★★☆ (4.5)</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product Card 6 -->
+        <div class="product-card">
+            <div class="discount-badge">-10%</div>
+            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="YSL Black Opium" class="product-image">
+            <div class="brand-tag">YVES SAINT LAURENT</div>
+            <div class="product-info">
+                <h3 class="product-title">Black Opium</h3>
+                <p class="product-description">An addictive gourmand floral with notes of coffee, vanilla, and white flowers.</p>
                 <div class="product-size">90ml Eau de Parfum</div>
-                <div class="product-price">$95.20 <span style="text-decoration: line-through; color: #999; font-size: 1rem;">$119.00</span></div>
+                <div class="product-price">$107.10 <span style="text-decoration: line-through; color: #999; font-size: 1rem;">$119.00</span></div>
+                <div class="product-rating">★★★★★ (4.7)</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product Card 7 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Marc Jacobs Daisy" class="product-image">
+            <div class="brand-tag">MARC JACOBS</div>
+            <div class="product-info">
+                <h3 class="product-title">Daisy Love</h3>
+                <p class="product-description">A playful floral fragrance with notes of cloudberry, daisy petals, and cashmere musk.</p>
+                <div class="product-size">75ml Eau de Toilette</div>
+                <div class="product-price">$86.00</div>
+                <div class="product-rating">★★★★☆ (4.4)</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product Card 8 -->
+        <div class="product-card">
+            <div class="discount-badge">-25%</div>
+            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Prada Candy" class="product-image">
+            <div class="brand-tag">PRADA</div>
+            <div class="product-info">
+                <h3 class="product-title">Candy Gloss</h3>
+                <p class="product-description">A sweet and sparkling fragrance with notes of citruses, musks, and benzoin.</p>
+                <div class="product-size">80ml Eau de Parfum</div>
+                <div class="product-price">$78.75 <span style="text-decoration: line-through; color: #999; font-size: 1rem;">$105.00</span></div>
+                <div class="product-rating">★★★★☆ (4.3)</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product Card 9 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Tom Ford Black Orchid" class="product-image">
+            <div class="brand-tag">TOM FORD</div>
+            <div class="product-info">
+                <h3 class="product-title">Black Orchid</h3>
+                <p class="product-description">A luxurious oriental floral with notes of black truffle, ylang-ylang, and patchouli.</p>
+                <div class="product-size">50ml Eau de Parfum</div>
+                <div class="product-price">$142.00</div>
+                <div class="product-rating">★★★★★ (4.8)</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product Card 10 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Jo Malone Wood Sage" class="product-image">
+            <div class="brand-tag">JO MALONE</div>
+            <div class="product-info">
+                <h3 class="product-title">Wood Sage & Sea Salt</h3>
+                <p class="product-description">A fresh, woody fragrance with notes of ambrette seeds, sea salt, and sage.</p>
+                <div class="product-size">100ml Cologne</div>
+                <div class="product-price">$138.00</div>
+                <div class="product-rating">★★★★★ (4.9)</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product Card 11 -->
+        <div class="product-card">
+            <div class="discount-badge">-15%</div>
+            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Armani Si" class="product-image">
+            <div class="brand-tag">GIORGIO ARMANI</div>
+            <div class="product-info">
+                <h3 class="product-title">Si Passione</h3>
+                <p class="product-description">A passionate fruity floral with notes of pear, rose, and vanilla.</p>
+                <div class="product-size">100ml Eau de Parfum</div>
+                <div class="product-price">$110.50 <span style="text-decoration: line-through; color: #999; font-size: 1rem;">$130.00</span></div>
                 <div class="product-rating">★★★★☆ (4.6)</div>
-                <form class="add-to-cart-form" data-product-id="4">
-                    <button class="add-to-cart" type="submit">Add to Cart</button>
-                </form>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product Card 12 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Hermès Twilly" class="product-image">
+            <div class="brand-tag">HERMÈS</div>
+            <div class="product-info">
+                <h3 class="product-title">Twilly d'Hermès</h3>
+                <p class="product-description">A spicy floral with notes of ginger, tuberose, and sandalwood.</p>
+                <div class="product-size">85ml Eau de Parfum</div>
+                <div class="product-price">$125.00</div>
+                <div class="product-rating">★★★★★ (4.7)</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product Card 13 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Dolce&Gabbana Light Blue" class="product-image">
+            <div class="brand-tag">DOLCE&GABBANA</div>
+            <div class="product-info">
+                <h3 class="product-title">Light Blue Intense</h3>
+                <p class="product-description">A fresh Mediterranean fragrance with notes of lemon, jasmine, and amberwood.</p>
+                <div class="product-size">100ml Eau de Parfum</div>
+                <div class="product-price">$92.00</div>
+                <div class="product-rating">★★★★☆ (4.5)</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product Card 14 -->
+        <div class="product-card">
+            <div class="discount-badge">-30%</div>
+            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Lancôme La Vie Est Belle" class="product-image">
+            <div class="brand-tag">LANCÔME</div>
+            <div class="product-info">
+                <h3 class="product-title">La Vie Est Belle</h3>
+                <p class="product-description">A gourmand oriental with notes of iris, patchouli, and praline.</p>
+                <div class="product-size">75ml Eau de Parfum</div>
+                <div class="product-price">$97.30 <span style="text-decoration: line-through; color: #999; font-size: 1rem;">$139.00</span></div>
+                <div class="product-rating">★★★★★ (4.8)</div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        <!-- Product Card 15 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Viktor&Rolf Flowerbomb" class="product-image">
+            <div class="brand-tag">VIKTOR&ROLF</div>
+            <div class="product-info">
+                <h3 class="product-title">Flowerbomb Dew</h3>
+                <p class="product-description">A fresh floral explosion with notes of bergamot, peony, and musk.</p>
+                <div class="product-size">90ml Eau de Parfum</div>
+                <div class="product-price">$135.00</div>
+                <div class="product-rating">★★★★☆ (4.6)</div>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
         </div>
     </div>

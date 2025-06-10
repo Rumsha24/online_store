@@ -224,37 +224,37 @@
                 border-radius: 4px;
                 padding: 2px;
             ">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Apple_Pay_logo.svg" alt="Apple Pay" style="
+            <img src="/online_store/images/apple pay.png" alt="Apple Pay" style="
                 height: 28px;
                 background: #fff0f3;
                 border-radius: 4px;
                 padding: 2px;
             ">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Discover_Card_logo.svg" alt="Discover" style="
+            <img src="/online_store/images/discover.png" alt="Discover" style="
                 height: 28px;
                 background: #fff0f3;
                 border-radius: 4px;
                 padding: 2px;
             ">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google Pay" style="
+            <img src="/online_store/images/googlepay.png" alt="Google Pay" style="
                 height: 28px;
                 background: #fff0f3;
                 border-radius: 4px;
                 padding: 2px;
             ">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" style="
+            <img src="/online_store/images/paypal.jpg" alt="PayPal" style="
                 height: 28px;
                 background: #fff0f3;
                 border-radius: 4px;
                 padding: 2px;
             ">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Shopify_logo_2018.svg" alt="Shop Pay" style="
+            <img src="/online_store/images/shop pay.png" alt="Shop Pay" style="
                 height: 28px;
                 background: #fff0f3;
                 border-radius: 4px;
                 padding: 2px;
             ">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Venmo_logo.svg" alt="Venmo" style="
+            <img src="/online_store/images/venmo.png" alt="Venmo" style="
                 height: 28px;
                 background: #fff0f3;
                 border-radius: 4px;

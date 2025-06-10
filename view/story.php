@@ -322,42 +322,42 @@ $controller = new ProductController($db);
         <div class="timeline-content">
             <h2>2005</h2>
             <p>Noire Essence was born in a small Montreal apartment, where founder Isabelle Roche began blending custom fragrances for friends and family.</p>
-            <img src="../../images/story1.jpg" alt="Our humble beginnings" class="timeline-img">
+            <img src="/online_store/images/humble.jpeg" alt="Our humble beginnings" class="timeline-img">
         </div>
     </div>
     <div class="timeline-container right">
         <div class="timeline-content">
             <h2>2008</h2>
             <p>Our first boutique opened in Old Montreal, offering 12 signature scents that quickly became local favorites.</p>
-            <img src="../../images/story2.jpg" alt="First boutique" class="timeline-img">
+            <img src="/online_store/images/first boutique.jpeg" alt="First boutique" class="timeline-img">
         </div>
     </div>
     <div class="timeline-container left">
         <div class="timeline-content">
             <h2>2012</h2>
             <p>We launched our first international shipment, sending our fragrances to customers in France and Japan.</p>
-            <img src="../../images/story3.jpg" alt="International shipping" class="timeline-img">
+            <img src="/online_store/images/shipping.png" alt="International shipping" class="timeline-img">
         </div>
     </div>
     <div class="timeline-container right">
         <div class="timeline-content">
             <h2>2015</h2>
             <p>Noire Essence was featured in Vogue Paris, marking our breakthrough in the international fragrance scene.</p>
-            <img src="../../images/story4.jpg" alt="Vogue feature" class="timeline-img">
+            <img src="/online_store/images/vogue feature.jpeg" alt="Vogue feature" class="timeline-img">
         </div>
     </div>
     <div class="timeline-container left">
         <div class="timeline-content">
             <h2>2020</h2>
             <p>We committed to 100% sustainable sourcing and became carbon neutral, proving luxury and ethics can coexist.</p>
-            <img src="../../images/story5.jpg" alt="Sustainability commitment" class="timeline-img">
+            <img src="/online_store/images/sus com.jpeg" alt="Sustainability commitment" class="timeline-img">
         </div>
     </div>
     <div class="timeline-container right">
         <div class="timeline-content">
             <h2>Today</h2>
             <p>With over 200 unique fragrances and stores in 12 countries, we continue to innovate while staying true to our artisanal roots.</p>
-            <img src="../../images/story6.jpg" alt="Current store" class="timeline-img floating">
+            <img src="/online_store/images/current store.jpeg" alt="Current store" class="timeline-img floating">
         </div>
     </div>
 </div>
@@ -369,25 +369,25 @@ $controller = new ProductController($db);
     
     <div class="team-grid">
         <div class="team-member">
-            <img src="../../images/team1.jpg" alt="Isabelle Roche">
+            <img src="/online_store/images/isabelle.jpeg" alt="Isabelle Roche">
             <h3>Isabelle Roche</h3>
             <p>Founder & Master Perfumer</p>
             <p>"Fragrance is the invisible accessory that completes your story."</p>
         </div>
         <div class="team-member">
-            <img src="../../images/team2.jpg" alt="Marcus Chen">
+            <img src="/online_store/images/marcus chen.jpeg" alt="Marcus Chen">
             <h3>Marcus Chen</h3>
             <p>Head of Product Development</p>
             <p>"Every scent should evoke an emotion, a memory, a dream."</p>
         </div>
         <div class="team-member">
-            <img src="../../images/team3.jpg" alt="Sophie Laurent">
+            <img src="/online_store/images/spohie laurent.jpeg" alt="Sophie Laurent">
             <h3>Sophie Laurent</h3>
             <p>Lead Aromachologist</p>
             <p>"The right fragrance doesn't just smell good - it makes you feel good."</p>
         </div>
         <div class="team-member">
-            <img src="../../images/team4.jpg" alt="David Moreau">
+            <img src="/online_store/images/david moreau.png" alt="David Moreau">
             <h3>David Moreau</h3>
             <p>International Brand Director</p>
             <p>"Bringing the Noire Essence experience to the world."</p>
@@ -431,27 +431,27 @@ $controller = new ProductController($db);
     
     <div class="gallery-grid">
         <div class="gallery-item">
-            <img src="../../images/gallery1.jpg" alt="Perfume lab" class="gallery-img">
+            <img src="/online_store/images/perfuem alb.jpeg" alt="Perfume lab" class="gallery-img">
             <div class="gallery-caption">Our perfume lab where magic happens</div>
         </div>
         <div class="gallery-item">
-            <img src="../../images/gallery2.jpg" alt="Ingredient selection" class="gallery-img">
+            <img src="/online_store/images/ingredient se;lection.jpeg" alt="Ingredient selection" class="gallery-img">
             <div class="gallery-caption">Hand-selecting the finest ingredients</div>
         </div>
         <div class="gallery-item">
-            <img src="../../images/gallery3.jpg" alt="Bottling process" class="gallery-img">
+            <img src="/online_store/images/bottling process.jpeg" alt="Bottling process" class="gallery-img">
             <div class="gallery-caption">The meticulous bottling process</div>
         </div>
         <div class="gallery-item">
-            <img src="../../images/gallery4.jpg" alt="Product testing" class="gallery-img">
+            <img src="/online_store/images/product testing.jpeg" alt="Product testing" class="gallery-img">
             <div class="gallery-caption">Quality testing every batch</div>
         </div>
         <div class="gallery-item">
-            <img src="../../images/gallery5.jpg" alt="Packaging" class="gallery-img">
+            <img src="/online_store/images/packaging.jpeg" alt="Packaging" class="gallery-img">
             <div class="gallery-caption">Eco-friendly packaging</div>
         </div>
         <div class="gallery-item">
-            <img src="../../images/gallery6.jpg" alt="Team meeting" class="gallery-img">
+            <img src="/online_store/images/team meeting'.jpeg" alt="Team meeting" class="gallery-img">
             <div class="gallery-caption">Our creative team at work</div>
         </div>
     </div>

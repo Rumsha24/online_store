@@ -20,3 +20,8 @@ Input password: 4094
 Stored hash: $2y$10$G3m.u5NXBltcLg3IBOQM4.WewifDE9KtDbpGcXCFxEcPy.GURXxUu
 Verify result: true
 Login successful for user ID: 7
+Login attempt: rumsha26@gmail.com
+Input password: 123
+Stored hash: $2y$10$ys0ptsBKRaY8chGrLIIbd.DC6Kkuv8al66cPuqgoQZQ7qrnN7py7G
+Verify result: true
+Login successful for user ID: 8

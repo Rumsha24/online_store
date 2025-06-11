@@ -277,22 +277,22 @@ $product = $controller->getSingleProduct(); // Use this if needed
     <h2 style="text-align:center; color:#c9184a; letter-spacing:1px; font-size:1.2em; margin-bottom:18px; border-bottom:2px solid #ffb3c1; display:inline-block; width:100%;">CLEARANCE SALES!</h2>
     <div style="display:flex; justify-content:center; align-items:flex-end; gap:24px; flex-wrap:wrap;">
         <div style="text-align:center; background:#fff0f3; border-radius:12px; padding:18px 12px; box-shadow:0 2px 8px #ffb3c1;">
-            <img src="../../images/clear1.jpg" alt="Clearance 1" style="height:140px; border-radius:8px; border:2px solid #ffb3c1;">
+            <img src="/online_store/images/malatse.jpeg" alt="Clearance 1" style="height:140px; border-radius:8px; border:2px solid #ffb3c1;">
             <div style="font-weight:bold; color:#c9184a;">MALTESE</div>
             <div style="color:#c9184a;">$49.75 CAD</div>
         </div>
         <div style="text-align:center; background:#fff0f3; border-radius:12px; padding:18px 12px; box-shadow:0 2px 8px #ffb3c1;">
-            <img src="../../images/clear2.jpg" alt="Clearance 2" style="height:140px; border-radius:8px; border:2px solid #ffb3c1;">
+            <img src="/online_store/images/ALFRED SUNG.jpeg" alt="Clearance 2" style="height:140px; border-radius:8px; border:2px solid #ffb3c1;">
             <div style="font-weight:bold; color:#c9184a;">ALFRED SUNG</div>
             <div style="color:#c9184a;">$32.95 CAD</div>
         </div>
         <div style="text-align:center; background:#fff0f3; border-radius:12px; padding:18px 12px; box-shadow:0 2px 8px #ffb3c1;">
-            <img src="../../images/clear3.jpg" alt="Clearance 3" style="height:140px; border-radius:8px; border:2px solid #ffb3c1;">
+            <img src=" /online_store/images/ESTEE LAUDER.jpeg"alt="Clearance 3" style="height:140px; border-radius:8px; border:2px solid #ffb3c1;">
             <div style="font-weight:bold; color:#c9184a;">ESTEE LAUDER</div>
             <div style="color:#c9184a;">$99.95 CAD</div>
         </div>
         <div style="text-align:center; background:#fff0f3; border-radius:12px; padding:18px 12px; box-shadow:0 2px 8px #ffb3c1;">
-            <img src="../../images/clear4.jpg" alt="Clearance 4" style="height:140px; border-radius:8px; border:2px solid #ffb3c1;">
+            <img src="/online_store/images/JOOP!.jpeg" alt="Clearance 4" style="height:140px; border-radius:8px; border:2px solid #ffb3c1;">
             <div style="font-weight:bold; color:#c9184a;">JOOP!</div>
             <div style="color:#c9184a;">$39.95 CAD</div>
         </div>

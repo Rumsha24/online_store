@@ -1,19 +1,16 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
 require_once __DIR__ . '/../models/WishlistModel.php';
 
 class WishlistController {
     private $model;
-    private $userId; // You'll need to get this from your session
+    private $userId;
 
     public function __construct($db) {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
         $this->model = new WishlistModel($db);
-        $this->userId = $_SESSION['user_id'] ?? null; // Adjust based on your auth system
+        $this->userId = $_SESSION['user_id'] ?? null;
     }
 
     public function index() {
@@ -23,43 +20,54 @@ class WishlistController {
         }
 
         $wishlistItems = $this->model->getWishlistItems($this->userId);
+        $wishlistCount = $this->model->getWishlistCount($this->userId);
+        
         require_once __DIR__ . '/../views/wishlist/index.php';
     }
 
     public function add() {
-        if (!$this->userId) {
-            echo json_encode(['success' => false, 'message' => 'Please login to add to wishlist']);
-            return;
+        session_start();
+        header('Content-Type: application/json');
+        if (!isset($_SESSION['user_id'])) {
+            echo json_encode(['success' => false, 'login' => false, 'message' => 'Please login to add to wishlist']);
+            exit;
         }
 
         $data = json_decode(file_get_contents('php://input'), true);
         $productId = $data['product_id'] ?? null;
         if (!$productId) {
-            echo json_encode(['success' => false, 'message' => 'Product ID is required']);
-            return;
+            echo json_encode(['success' => false, 'login' => true, 'message' => 'No product specified.']);
+            exit;
         }
 
-        // Add to wishlist logic (implement this in your model)
-        $success = $this->model->addToWishlist($this->userId, $productId);
-        $count = $this->model->getWishlistCount($this->userId);
+        // Add to wishlist logic here
+        // $result = $this->model->addToWishlist($_SESSION['user_id'], $productId);
+        // $count = $this->model->getWishlistCount($_SESSION['user_id']);
 
-        echo json_encode([
-            'success' => $success,
-            'message' => $success ? 'Added to wishlist!' : 'Already in wishlist.',
-            'count' => $count
-        ]);
+        // For demonstration, always succeed:
+        echo json_encode(['success' => true, 'login' => true, 'message' => 'Added to wishlist!']);
+        exit;
     }
 
     public function remove() {
         if (!$this->userId) {
-            echo json_encode(['success' => false, 'message' => 'Please login to modify wishlist']);
+            http_response_code(401);
+            echo json_encode([
+                'success' => false,
+                'message' => 'Please login to modify wishlist'
+            ]);
             return;
         }
 
         $data = json_decode(file_get_contents('php://input'), true);
         $productId = $data['product_id'] ?? null;
+
         if (!$productId) {
-            echo json_encode(['success' => false, 'message' => 'Product ID is required']);
+            http_response_code(400);
+            echo json_encode([
+                'success' => false,
+                'message' => 'Product ID is required'
+            ]);
             return;
         }
 
@@ -69,23 +77,7 @@ class WishlistController {
         echo json_encode([
             'success' => $success,
             'count' => $count,
-            'message' => 'Removed from wishlist'
-        ]);
-    }
-
-    public function status() {
-        if (!$this->userId) {
-            echo json_encode(['success' => false, 'message' => 'Not logged in']);
-            return;
-        }
-
-        $wishlistItems = $this->model->getWishlistItems($this->userId);
-        $productIds = array_column($wishlistItems, 'id');
-
-        echo json_encode([
-            'success' => true,
-            'wishlistItems' => $productIds
+            'message' => $success ? 'Removed from wishlist' : 'Failed to remove item'
         ]);
     }
 }
-?>

@@ -46,8 +46,9 @@ class CommentController {
             }
         }
 
-        $this->commentModel->addComment($productID, $userID, $rating, $text, $imagePath);
-        header("Location: /online_store/public/index.php?url=home/index");
+        $this->commentModel->addComment($userID, $productID, $rating, $text, $imagePath);
+
+        header("Location: /online_store/view/user/comments.php");
         exit;
     }
 }

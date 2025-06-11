@@ -164,7 +164,7 @@ try {
             <!-- Orders List View -->
             <?php if (empty($orders)): ?>
                 <div class="alert alert-info">You haven't placed any orders yet.</div>
-                <a href="products.php" class="btn btn-primary">Browse Products</a>
+                <a href="shopall.php" class="btn btn-primary">Browse Products</a>
             <?php else: ?>
                 <?php foreach ($orders as $order): ?>
                     <div class="card order-card">

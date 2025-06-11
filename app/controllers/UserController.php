@@ -12,7 +12,7 @@ class UserController {
 
     // Show Signup Form
     public function showSignupForm() {
-        include __DIR__ . '/../../view/user/signup.php';
+        require_once __DIR__ . '/../views/user/signup.php';
     }
 
     // Handle Signup POST

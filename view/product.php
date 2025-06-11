@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Luxury Perfumes Collection</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <meta name="csrf-token" content="<?= $_SESSION['csrf_token'] ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         body {
             background: #fff0f3;
@@ -192,8 +195,9 @@
                 <div class="product-price">$89.99 <span style="text-decoration: line-through; color: #999; font-size: 1rem;">$105.99</span></div>
                 <div class="product-rating">★★★★★ (4.9)</div>
                 <div class="product-actions">
-                    <form method="POST" action="/cart/add">
+                    <form method="POST" action="/cart/add" class="add-to-cart-form">
                         <input type="hidden" name="productID" value="1">
+                        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
                         <button type="submit" class="add-to-cart">Add to Cart</button>
                     </form>
                     <button class="wishlist-btn" data-product-id="1">
@@ -214,8 +218,9 @@
                 <div class="product-price">$132.00</div>
                 <div class="product-rating">★★★★★ (4.8)</div>
                 <div class="product-actions">
-                    <form method="POST" action="/cart/add">
+                    <form method="POST" action="/cart/add" class="add-to-cart-form">
                         <input type="hidden" name="productID" value="2">
+                        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
                         <button type="submit" class="add-to-cart">Add to Cart</button>
                     </form>
                     <button class="wishlist-btn" data-product-id="2">
@@ -237,8 +242,9 @@
                 <div class="product-price">$95.20 <span style="text-decoration: line-through; color: #999; font-size: 1rem;">$119.00</span></div>
                 <div class="product-rating">★★★★☆ (4.6)</div>
                 <div class="product-actions">
-                    <form method="POST" action="/cart/add">
+                    <form method="POST" action="/cart/add" class="add-to-cart-form">
                         <input type="hidden" name="productID" value="3">
+                        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
                         <button type="submit" class="add-to-cart">Add to Cart</button>
                     </form>
                     <button class="wishlist-btn" data-product-id="3">
@@ -259,8 +265,9 @@
                 <div class="product-price">$145.00</div>
                 <div class="product-rating">★★★★★ (4.9)</div>
                 <div class="product-actions">
-                    <form method="POST" action="/cart/add">
+                    <form method="POST" action="/cart/add" class="add-to-cart-form">
                         <input type="hidden" name="productID" value="4">
+                        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
                         <button type="submit" class="add-to-cart">Add to Cart</button>
                     </form>
                     <button class="wishlist-btn" data-product-id="4">
@@ -281,8 +288,9 @@
                 <div class="product-price">$98.00</div>
                 <div class="product-rating">★★★★☆ (4.5)</div>
                 <div class="product-actions">
-                    <form method="POST" action="/cart/add">
+                    <form method="POST" action="/cart/add" class="add-to-cart-form">
                         <input type="hidden" name="productID" value="5">
+                        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
                         <button type="submit" class="add-to-cart">Add to Cart</button>
                     </form>
                     <button class="wishlist-btn" data-product-id="5">
@@ -304,8 +312,9 @@
                 <div class="product-price">$107.10 <span style="text-decoration: line-through; color: #999; font-size: 1rem;">$119.00</span></div>
                 <div class="product-rating">★★★★★ (4.7)</div>
                 <div class="product-actions">
-                    <form method="POST" action="/cart/add">
+                    <form method="POST" action="/cart/add" class="add-to-cart-form">
                         <input type="hidden" name="productID" value="6">
+                        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
                         <button type="submit" class="add-to-cart">Add to Cart</button>
                     </form>
                     <button class="wishlist-btn" data-product-id="6">
@@ -326,8 +335,9 @@
                 <div class="product-price">$86.00</div>
                 <div class="product-rating">★★★★☆ (4.4)</div>
                 <div class="product-actions">
-                    <form method="POST" action="/cart/add">
+                    <form method="POST" action="/cart/add" class="add-to-cart-form">
                         <input type="hidden" name="productID" value="7">
+                        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
                         <button type="submit" class="add-to-cart">Add to Cart</button>
                     </form>
                     <button class="wishlist-btn" data-product-id="7">
@@ -349,8 +359,9 @@
                 <div class="product-price">$78.75 <span style="text-decoration: line-through; color: #999; font-size: 1rem;">$105.00</span></div>
                 <div class="product-rating">★★★★☆ (4.3)</div>
                 <div class="product-actions">
-                    <form method="POST" action="/cart/add">
+                    <form method="POST" action="/cart/add" class="add-to-cart-form">
                         <input type="hidden" name="productID" value="8">
+                        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
                         <button type="submit" class="add-to-cart">Add to Cart</button>
                     </form>
                     <button class="wishlist-btn" data-product-id="8">
@@ -371,8 +382,9 @@
                 <div class="product-price">$142.00</div>
                 <div class="product-rating">★★★★★ (4.8)</div>
                 <div class="product-actions">
-                    <form method="POST" action="/cart/add">
+                    <form method="POST" action="/cart/add" class="add-to-cart-form">
                         <input type="hidden" name="productID" value="9">
+                        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
                         <button type="submit" class="add-to-cart">Add to Cart</button>
                     </form>
                     <button class="wishlist-btn" data-product-id="9">
@@ -393,8 +405,9 @@
                 <div class="product-price">$138.00</div>
                 <div class="product-rating">★★★★★ (4.9)</div>
                 <div class="product-actions">
-                    <form method="POST" action="/cart/add">
+                    <form method="POST" action="/cart/add" class="add-to-cart-form">
                         <input type="hidden" name="productID" value="10">
+                        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
                         <button type="submit" class="add-to-cart">Add to Cart</button>
                     </form>
                     <button class="wishlist-btn" data-product-id="10">
@@ -416,8 +429,9 @@
                 <div class="product-price">$110.50 <span style="text-decoration: line-through; color: #999; font-size: 1rem;">$130.00</span></div>
                 <div class="product-rating">★★★★☆ (4.6)</div>
                 <div class="product-actions">
-                    <form method="POST" action="/cart/add">
+                    <form method="POST" action="/cart/add" class="add-to-cart-form">
                         <input type="hidden" name="productID" value="11">
+                        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
                         <button type="submit" class="add-to-cart">Add to Cart</button>
                     </form>
                     <button class="wishlist-btn" data-product-id="11">
@@ -438,8 +452,9 @@
                 <div class="product-price">$125.00</div>
                 <div class="product-rating">★★★★★ (4.7)</div>
                 <div class="product-actions">
-                    <form method="POST" action="/cart/add">
+                    <form method="POST" action="/cart/add" class="add-to-cart-form">
                         <input type="hidden" name="productID" value="12">
+                        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
                         <button type="submit" class="add-to-cart">Add to Cart</button>
                     </form>
                     <button class="wishlist-btn" data-product-id="12">
@@ -460,8 +475,9 @@
                 <div class="product-price">$92.00</div>
                 <div class="product-rating">★★★★☆ (4.5)</div>
                 <div class="product-actions">
-                    <form method="POST" action="/cart/add">
+                    <form method="POST" action="/cart/add" class="add-to-cart-form">
                         <input type="hidden" name="productID" value="13">
+                        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
                         <button type="submit" class="add-to-cart">Add to Cart</button>
                     </form>
                     <button class="wishlist-btn" data-product-id="13">
@@ -483,8 +499,9 @@
                 <div class="product-price">$97.30 <span style="text-decoration: line-through; color: #999; font-size: 1rem;">$139.00</span></div>
                 <div class="product-rating">★★★★★ (4.8)</div>
                 <div class="product-actions">
-                    <form method="POST" action="/cart/add">
+                    <form method="POST" action="/cart/add" class="add-to-cart-form">
                         <input type="hidden" name="productID" value="14">
+                        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
                         <button type="submit" class="add-to-cart">Add to Cart</button>
                     </form>
                     <button class="wishlist-btn" data-product-id="14">
@@ -505,8 +522,9 @@
                 <div class="product-price">$135.00</div>
                 <div class="product-rating">★★★★☆ (4.6)</div>
                 <div class="product-actions">
-                    <form method="POST" action="/cart/add">
+                    <form method="POST" action="/cart/add" class="add-to-cart-form">
                         <input type="hidden" name="productID" value="15">
+                        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'] ?>">
                         <button type="submit" class="add-to-cart">Add to Cart</button>
                     </form>
                     <button class="wishlist-btn" data-product-id="15">
@@ -517,9 +535,12 @@
         </div>
 
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
+        // CSRF token for AJAX
+        const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+
+        // Wishlist button functionality
         document.querySelectorAll('.wishlist-btn').forEach(button => {
             button.addEventListener('click', async function() {
                 const productId = this.getAttribute('data-product-id');
@@ -527,7 +548,10 @@
                 try {
                     const response = await fetch(isAdded ? '/wishlist/remove' : '/wishlist/add', {
                         method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
+                        headers: { 
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': csrfToken
+                        },
                         body: JSON.stringify({ product_id: productId })
                     });
                     const data = await response.json();
@@ -538,7 +562,7 @@
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Added!',
-                                text: data.message,
+                                text: data.message || 'Product added to wishlist.',
                                 timer: 1500,
                                 showConfirmButton: false
                             });
@@ -548,7 +572,7 @@
                             Swal.fire({
                                 icon: 'success',
                                 title: 'Removed!',
-                                text: data.message,
+                                text: data.message || 'Product removed from wishlist.',
                                 timer: 1500,
                                 showConfirmButton: false
                             });
@@ -557,7 +581,43 @@
                         Swal.fire({
                             icon: 'error',
                             title: 'Oops...',
-                            text: data.message
+                            text: data.message || 'An error occurred'
+                        });
+                    }
+                } catch (error) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'An error occurred'
+                    });
+                }
+            });
+        });
+
+        // Cart form submission
+        document.querySelectorAll('.add-to-cart-form').forEach(form => {
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const formData = new FormData(this);
+                try {
+                    const response = await fetch('/cart/add', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    const data = await response.json();
+                    if (data.success) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Added to Cart!',
+                            text: data.message || 'Product added to cart.',
+                            timer: 1500,
+                            showConfirmButton: false
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: data.message || 'An error occurred'
                         });
                     }
                 } catch (error) {

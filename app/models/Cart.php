@@ -9,21 +9,16 @@ class Cart {
         $this->conn = $db;
     }
 
-    public function addProduct($productId) {
-        if (session_status() === PHP_SESSION_NONE) {
-            session_start();
-        }
-
-        if (!isset($_SESSION['userID'])) {
-            error_log("User not logged in.");
+    // Modified to accept userId from the controller
+    public function addProduct($userId, $productId) {
+        if (!$userId) {
+            error_log("User ID is missing for adding to cart.");
             return false;
         }
 
-        $userId = $_SESSION['userID'];
-
         try {
-            // Check if the product exists
-            $sqlCheckProduct = "SELECT productID FROM products WHERE productID = :productID";
+            // Check if the product exists in the products table
+            $sqlCheckProduct = "SELECT productID, name FROM products WHERE productID = :productID";
             $stmtCheckProduct = $this->conn->prepare($sqlCheckProduct);
             $stmtCheckProduct->bindParam(':productID', $productId, PDO::PARAM_INT);
             $stmtCheckProduct->execute();
@@ -33,7 +28,7 @@ class Cart {
                 return false;
             }
 
-            // Check if the product already exists in cart
+            // Check if the product already exists in cart for this user
             $sqlCheckCart = "SELECT quantity FROM {$this->table} WHERE userID = :userID AND productID = :productID";
             $stmtCheckCart = $this->conn->prepare($sqlCheckCart);
             $stmtCheckCart->bindParam(':userID', $userId, PDO::PARAM_INT);
@@ -41,8 +36,8 @@ class Cart {
             $stmtCheckCart->execute();
 
             if ($existing = $stmtCheckCart->fetch(PDO::FETCH_ASSOC)) {
+                // If product exists, update quantity
                 $newQuantity = $existing['quantity'] + 1;
-
                 $sqlUpdate = "UPDATE {$this->table} SET quantity = :quantity WHERE userID = :userID AND productID = :productID";
                 $stmtUpdate = $this->conn->prepare($sqlUpdate);
                 $stmtUpdate->bindParam(':quantity', $newQuantity, PDO::PARAM_INT);
@@ -50,11 +45,12 @@ class Cart {
                 $stmtUpdate->bindParam(':productID', $productId, PDO::PARAM_INT);
                 return $stmtUpdate->execute();
             } else {
+                // If product does not exist, insert new record
                 $sqlInsert = "INSERT INTO {$this->table} (userID, productID, quantity) VALUES (:userID, :productID, :quantity)";
                 $stmtInsert = $this->conn->prepare($sqlInsert);
                 $stmtInsert->bindParam(':userID', $userId, PDO::PARAM_INT);
                 $stmtInsert->bindParam(':productID', $productId, PDO::PARAM_INT);
-                $quantity = 1;
+                $quantity = 1; // Default quantity
                 $stmtInsert->bindParam(':quantity', $quantity, PDO::PARAM_INT);
                 return $stmtInsert->execute();
             }

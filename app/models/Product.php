@@ -32,7 +32,7 @@ class Product {
     }
 
     public function update($id, $description, $image, $price, $shippingCost) {
-        $query = "UPDATE $this->table 
+        $query = "UPDATE $this->table
                   SET description = ?, image = ?, price = ?, shippingCost = ?
                   WHERE productID = ?";
         $stmt = $this->conn->prepare($query);
@@ -40,8 +40,13 @@ class Product {
     }
 
     public function delete($id) {
-        $query = "DELETE FROM $this->table WHERE productID = ?";
+        $query = "DELETE FROM " . $this->table . " WHERE productID = ?";
         $stmt = $this->conn->prepare($query);
         return $stmt->execute([$id]);
+    }
+
+    public function getAllProducts() {
+        $stmt = $this->conn->query("SELECT productID, name FROM products");
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

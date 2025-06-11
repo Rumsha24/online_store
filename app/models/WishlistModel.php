@@ -1,119 +1,91 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) { session_start(); }
-?>
-<?php
-class WishlistModel {
-    private $db;
+require_once __DIR__ . '/../models/WishlistModel.php';
+
+class WishlistController {
+    private $model;
+    private $userId;
 
     public function __construct($db) {
-        $this->db = $db;
-    }
-
-    public function getWishlistItems($userId) {
-        $query = "SELECT p.* FROM products p 
-                  JOIN wishlists w ON p.id = w.product_id 
-                  WHERE w.user_id = :user_id";
-        $stmt = $this->db->prepare($query);
-        $stmt->bindParam(':user_id', $userId);
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-    public function addToWishlist($userId, $productId) {
-        // Check if already in wishlist
-        $checkQuery = "SELECT * FROM wishlists 
-                      WHERE user_id = :user_id AND product_id = :product_id";
-        $checkStmt = $this->db->prepare($checkQuery);
-        $checkStmt->bindParam(':user_id', $userId);
-        $checkStmt->bindParam(':product_id', $productId);
-        $checkStmt->execute();
-
-        if ($checkStmt->rowCount() == 0) {
-            $insertQuery = "INSERT INTO wishlists (user_id, product_id, created_at) 
-                           VALUES (:user_id, :product_id, NOW())";
-            $insertStmt = $this->db->prepare($insertQuery);
-            $insertStmt->bindParam(':user_id', $userId);
-            $insertStmt->bindParam(':product_id', $productId);
-            return $insertStmt->execute();
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
         }
-        return false;
+        $this->model = new WishlistModel($db);
+        $this->userId = $_SESSION['user_id'] ?? null;
     }
 
-    public function removeFromWishlist($userId, $productId) {
-        $query = "DELETE FROM wishlists 
-                 WHERE user_id = :user_id AND product_id = :product_id";
-        $stmt = $this->db->prepare($query);
-        $stmt->bindParam(':user_id', $userId);
-        $stmt->bindParam(':product_id', $productId);
-        return $stmt->execute();
+    public function index() {
+        if (!$this->userId) {
+            header('Location: /login?redirect=wishlist');
+            exit();
+        }
+
+        $wishlistItems = $this->model->getWishlistItems($this->userId);
+        $wishlistCount = $this->model->getWishlistCount($this->userId);
+        
+        require_once __DIR__ . '/../views/wishlist/index.php';
     }
 
-    public function getWishlistCount($userId) {
-        $query = "SELECT COUNT(*) as count FROM wishlists WHERE user_id = :user_id";
-        $stmt = $this->db->prepare($query);
-        $stmt->bindParam(':user_id', $userId);
-        $stmt->execute();
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        return $result['count'];
+    public function add() {
+        if (!$this->userId) {
+            http_response_code(401);
+            echo json_encode([
+                'success' => false,
+                'message' => 'Please login to add to wishlist'
+            ]);
+            return;
+        }
+
+        $data = json_decode(file_get_contents('php://input'), true);
+        $productId = $data['product_id'] ?? null;
+
+        if (!$productId) {
+            http_response_code(400);
+            echo json_encode([
+                'success' => false,
+                'message' => 'Product ID is required'
+            ]);
+            return;
+        }
+
+        $success = $this->model->addToWishlist($this->userId, $productId);
+        $count = $this->model->getWishlistCount($this->userId);
+
+        echo json_encode([
+            'success' => $success,
+            'message' => $success ? 'Added to wishlist!' : 'Item already in wishlist or failed to add.',
+            'count' => $count
+        ]);
+    }
+
+    public function remove() {
+        if (!$this->userId) {
+            http_response_code(401);
+            echo json_encode([
+                'success' => false,
+                'message' => 'Please login to modify wishlist'
+            ]);
+            return;
+        }
+
+        $data = json_decode(file_get_contents('php://input'), true);
+        $productId = $data['product_id'] ?? null;
+
+        if (!$productId) {
+            http_response_code(400);
+            echo json_encode([
+                'success' => false,
+                'message' => 'Product ID is required'
+            ]);
+            return;
+        }
+
+        $success = $this->model->removeFromWishlist($this->userId, $productId);
+        $count = $this->model->getWishlistCount($this->userId);
+
+        echo json_encode([
+            'success' => $success,
+            'count' => $count,
+            'message' => $success ? 'Removed from wishlist' : 'Failed to remove item'
+        ]);
     }
 }
-?><?php
-if (session_status() === PHP_SESSION_NONE) { session_start(); }
-?>
-<?php
-class WishlistModel {
-    private $db;
-
-    public function __construct($db) {
-        $this->db = $db;
-    }
-
-    public function getWishlistItems($userId) {
-        $query = "SELECT p.* FROM products p 
-                  JOIN wishlists w ON p.id = w.product_id 
-                  WHERE w.user_id = :user_id";
-        $stmt = $this->db->prepare($query);
-        $stmt->bindParam(':user_id', $userId);
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-    public function addToWishlist($userId, $productId) {
-        // Check if already in wishlist
-        $checkQuery = "SELECT * FROM wishlists 
-                      WHERE user_id = :user_id AND product_id = :product_id";
-        $checkStmt = $this->db->prepare($checkQuery);
-        $checkStmt->bindParam(':user_id', $userId);
-        $checkStmt->bindParam(':product_id', $productId);
-        $checkStmt->execute();
-
-        if ($checkStmt->rowCount() == 0) {
-            $insertQuery = "INSERT INTO wishlists (user_id, product_id, created_at) 
-                           VALUES (:user_id, :product_id, NOW())";
-            $insertStmt = $this->db->prepare($insertQuery);
-            $insertStmt->bindParam(':user_id', $userId);
-            $insertStmt->bindParam(':product_id', $productId);
-            return $insertStmt->execute();
-        }
-        return false;
-    }
-
-    public function removeFromWishlist($userId, $productId) {
-        $query = "DELETE FROM wishlists 
-                 WHERE user_id = :user_id AND product_id = :product_id";
-        $stmt = $this->db->prepare($query);
-        $stmt->bindParam(':user_id', $userId);
-        $stmt->bindParam(':product_id', $productId);
-        return $stmt->execute();
-    }
-
-    public function getWishlistCount($userId) {
-        $query = "SELECT COUNT(*) as count FROM wishlists WHERE user_id = :user_id";
-        $stmt = $this->db->prepare($query);
-        $stmt->bindParam(':user_id', $userId);
-        $stmt->execute();
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
-        return $result['count'];
-    }
-}
-?>

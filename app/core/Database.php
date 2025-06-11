@@ -15,22 +15,13 @@ class Database {
                 $this->username,
                 $this->password
             );
-
-            // Enable detailed error reporting
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-            // Optional: Set default fetch mode
             $this->conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
-            // Optional: Enable emulated prepares (for debugging compatibility)
             $this->conn->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-
-            // Optional: Ensure foreign key checks are enabled (mostly needed for SQLite)
             $this->conn->exec("SET FOREIGN_KEY_CHECKS=1");
-
         } catch (PDOException $exception) {
             echo "<strong>Database Connection Error:</strong> " . $exception->getMessage();
-            exit; // Stop script on connection error
+            exit;
         }
 
         return $this->conn;

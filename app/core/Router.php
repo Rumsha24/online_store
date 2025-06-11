@@ -1,6 +1,10 @@
+<?php
+// Cart routes
+$router->post('/cart/add', 'CartController@add');
+$router->get('/cart', 'CartController@view');
+$router->post('/cart/remove', 'CartController@remove');
 
-// In your routing file (e.g., app/core/Router.php)
+// Wishlist routes
 $router->get('/wishlist', 'WishlistController@index');
 $router->post('/wishlist/add', 'WishlistController@add');
 $router->post('/wishlist/remove', 'WishlistController@remove');
-$router->get('/wishlist/status', 'WishlistController@status');

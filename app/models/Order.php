@@ -10,7 +10,7 @@ class Order {
     public function placeOrder(int $userId, float $totalAmount): bool 
     {
         try {
-            $query = "INSERT INTO $this->table (userID, totalAmount, status, createdAt) 
+            $query = "INSERT INTO $this->table (userID, totalAmount, status, orderDate) 
                       VALUES (?, ?, 'pending', NOW())";
             $stmt = $this->conn->prepare($query);
             return $stmt->execute([$userId, $totalAmount]);
@@ -23,7 +23,7 @@ class Order {
     public function getUserOrders(int $userId, int $limit = null, int $offset = null): array 
     {
         try {
-            $query = "SELECT * FROM $this->table WHERE userID = ? ORDER BY createdAt DESC";
+            $query = "SELECT * FROM $this->table WHERE userID = ? ORDER BY orderDate DESC";
             
             if ($limit !== null) {
                 $query .= " LIMIT ? OFFSET ?";
@@ -60,6 +60,18 @@ class Order {
             return $stmt->execute([$status, $orderId]);
         } catch (\PDOException $e) {
             throw new \RuntimeException("Failed to update order status: " . $e->getMessage());
+        }
+    }
+
+    public function getUserOrdersCount(int $userId): int
+    {
+        try {
+            $query = "SELECT COUNT(*) FROM $this->table WHERE userID = ?";
+            $stmt = $this->conn->prepare($query);
+            $stmt->execute([$userId]);
+            return (int)$stmt->fetchColumn();
+        } catch (\PDOException $e) {
+            throw new \RuntimeException("Failed to count orders: " . $e->getMessage());
         }
     }
 }

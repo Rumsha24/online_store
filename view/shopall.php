@@ -181,6 +181,9 @@
     <div class="products-container">
 
         <!-- Product 1 -->
+         
+         
+         
         <div class="product-card">
             <div class="discount-badge">-15%</div>
             <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Versace Bright Crystal" class="product-image" />

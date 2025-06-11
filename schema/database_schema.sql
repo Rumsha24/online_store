@@ -51,6 +51,16 @@ CREATE TABLE orders (
     FOREIGN KEY (userID) REFERENCES users(userID)
 );
 
+CREATE TABLE wishlists (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    product_id INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (product_id) REFERENCES products(id),
+    UNIQUE KEY unique_wishlist (user_id, product_id)
+);
+
 -- Sample data for testing
 INSERT INTO users (email, password, username, shippingAddress) VALUES
 ('test@example.com', 'testpass123', 'TestUser', '123 Main St');

@@ -696,6 +696,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_to_cart'])) {
             left: 20px;
         }
     }
+    
+    /* Add this CSS in your <style> section or a CSS file */
+    .perfumes-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+    }
+    .perfume-card {
+        width: 300px;
+        margin-bottom: 24px;
+        background: #fff0f3;
+        border: 1.5px solid #c9184a;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 </style>
 
 <!-- Scroll progress indicator -->
@@ -789,25 +807,35 @@ endif; ?>
 
     <!-- Top Perfume & Cologne Brands -->
 <h1 class="featured-perfumes-title" style="text-align:center; color:#c9184a;">Top Perfume & Cologne Brands</h1>
- <div class="perfumes-row" style="margin-bottom:40px;">
+<div class="perfumes-row" style="margin-bottom:40px;">
     <div class="perfume-card" style="background:#fff0f3; border:1.5px solid #c9184a;">
-        <img src="../../images/7.png" alt="Jean Paul Gaultier" style="height:110px; background:#fff0f3; border-radius:10px; padding:8px; border:none;">
+        <a href="https://www.jeanpaulgaultier.com/ww/en/?srsltid=AfmBOoqkrFAxd93G82frmjE6NeCBCqiLG5tQpH_jgHmyNSuQ1VZvfGQI">
+          <img src="../images/7.png" alt="Jean Paul Gaultier" style="height:110px; background:#fff0f3; border-radius:10px; padding:8px; border:none;">
+        </a>
         <div style="font-weight:bold; color:#c9184a; margin-top:10px;">Jean Paul Gaultier</div>
     </div>
     <div class="perfume-card" style="background:#fff0f3; border:1.5px solid #c9184a;">
-        <img src="../../images/9.jpg" alt="Versace" style="height:110px; background:#fff0f3; border-radius:10px; padding:8px; border:none;">
+    <a href = "https://www.versace.com/ca/en/">    
+    <img src="../images/9.jpg" alt="Versace" style="height:110px; background:#fff0f3; border-radius:10px; padding:8px; border:none;">
+        </a>
         <div style="font-weight:bold; color:#c9184a; margin-top:10px;">Versace</div>
     </div>
     <div class="perfume-card" style="background:#fff0f3; border:1.5px solid #c9184a;">
-        <img src="../../images/14.jpeg" alt="Giorgio Armani" style="height:110px; background:#fff0f3; border-radius:10px; padding:8px; border:none;">
+    <a href = "https://www.armani.com/ca-en/armani-beauty/fragrances/">
+        <img src="../images/14.jpeg" alt="Giorgio Armani" style="height:110px; background:#fff0f3; border-radius:10px; padding:8px; border:none;">
+        </a>
         <div style="font-weight:bold; color:#c9184a; margin-top:10px;">Giorgio Armani</div>
     </div>
     <div class="perfume-card" style="background:#fff0f3; border:1.5px solid #c9184a;">
-        <img src="../../images/18.avif" alt="D&G" style="height:110px; background:#fff0f3; border-radius:10px; padding:8px; border:none;">
-        <div style="font-weight:bold; color:#c9184a; margin-top:10px;"> D&G </div>
+    <a href = "https://www.dolcegabbana.com/ca-en/fragrances/">
+        <img src="../images/18.avif" alt="D&G" style="height:110px; background:#fff0f3; border-radius:10px; padding:8px; border:none;">
+        </a> 
+        <div style="font-weight:bold; color:#c9184a; margin-top:10px;"> D&G </div>   
     </div>
     <div class="perfume-card" style="background:#fff0f3; border:1.5px solid #c9184a;">
-        <img src="../../images/21.png" alt="Calvin Klein" style="height:110px; background:#fff0f3; border-radius:10px; padding:8px; border:none;">
+        <a href = "https://www.calvinklein.ca/en/">
+        <img src="../images/21.png" alt="Calvin Klein" style="height:110px; background:#fff0f3; border-radius:10px; padding:8px; border:none;">
+        </a>
         <div style="font-weight:bold; color:#c9184a; margin-top:10px;">Calvin Klein</div>
     </div>
 </div>

@@ -110,12 +110,11 @@
 <a href="/online_store/view/index.php" class="brand">NOIRE ESSENCE</a>
 <div class="nav-links">
     <a href="/online_store/view/products.php">Vintage Collections</a>
-    <a href="/online_store/view/order.php">Orders</a>
+    <a href="/online_store/view/orders.php">Orders</a>
     <a href="/online_store/view/comments.php">Comments</a>
     <a href="/online_store/view/story.php">Our Story</a>
 </div>
 <div class="nav-icons">
-    <a href="/online_store/view/wishlist.php" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
     <a href="/online_store/view/login.php" title="Account"><i class="fa-regular fa-user"></i></a>
     <a href="/online_store/view/cart.php" title="Cart"><i class="fa-solid fa-cart-shopping"></i></a>
 </div>

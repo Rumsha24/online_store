@@ -850,7 +850,7 @@ endif; ?>
             <img src="<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['description']) ?>">
             <h3><?= htmlspecialchars($product['description']) ?></h3>
             <span class="price">$<?= number_format($product['price'], 2) ?></span>
-            <form method="post" action="index.php" class="add-to-cart-form">
+            <form method="post" action="cart.php" class="add-to-cart-form">
                 <input type="hidden" name="product_id" value="<?= $product['productID'] ?>">
                 <input type="number" name="quantity" value="1" min="1">
                 <input type="submit" name="add_to_cart" value="Add to Cart">

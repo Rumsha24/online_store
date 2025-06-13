@@ -4,7 +4,7 @@ include __DIR__ . '/header.php';
 
 // If user is already logged in, redirect to home
 if (isset($_SESSION['user_id'])) {
-    header("Location: /ecommerce-store/ecommerce-api/view/index.php");
+    header("Location: /online_store/view/index.php");
     exit;
 }
 
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'] ?? '';
     
     if ($user->login($email, $password)) {
-        header("Location: /ecommerce-store/ecommerce-api/view/index.php");
+        header("Location: /online_store/view/login.php");
         exit;
     } else {
         $error = "Invalid email or password";
@@ -155,7 +155,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="error-message"><?= $error ?></div>
         <?php endif; ?>
 
-        <form action="/ecommerce-store/ecommerce-api/view/index.php" method="POST">
+        <form action="/online_store/view/login.php" method="POST">
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
@@ -170,7 +170,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
 
         <div class="signup-link">
-            Don't have an account? <a href="/ecommerce-store/ecommerce-api/view/signup.php">Sign Up</a>
+            Don't have an account? <a href="/online_store/view/signup.php">Sign Up</a>
         </div>
     </div>
 </body>

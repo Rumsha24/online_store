@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <?php
 header("Content-Type: application/json");
 require_once 'db_connect.php';
@@ -162,7 +162,7 @@ switch ($method) {
         break;
 }
 ?>
-=======
+
 <!-- Order Page: Recording a Sale -->
 <h2 style="color:#c9184a; text-align:center;">Place Your Order</h2>
 <form action="process_order.php" method="POST" style="max-width:400px; margin:0 auto; background:#fff0f3; padding:24px; border-radius:10px; border:1.5px solid #c9184a;">
@@ -187,4 +187,3 @@ switch ($method) {
 
   <button type="submit" style="background:#c9184a; color:#fff; border:none; padding:10px 20px; border-radius:5px; font-weight:bold;">Submit Order</button>
 </form>
->>>>>>> 3055d4052a4c429be0bfa36aca1444ef31efc976

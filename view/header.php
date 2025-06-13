@@ -107,21 +107,17 @@
 
 <div class="topbar">
     <div class="navbar-container">
-        <a href="/online_store/view/home/index.php" class="brand">NOIRE ESSENCE</a>
-        <div class="nav-links">
-            <a href="/online_store/view/shopall.php">Shop All</a>
-            <a href="/online_store/view/product.php">Vintage Collections</a>
-            <a href="/online_store/view/new.php">New Arrivals</a>
-            <a href="/online_store/view/order.php">Orders</a>
-            <a href="/online_store/view/user/comments.php">Comments</a>
-            <a href="/online_store/view/story.php">Our Story</a>
-        </div>
-        <div class="nav-icons">
-            <a href="/online_store/view/wishlist/index.php" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
-            <a href="/online_store/view/search.php" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
-            <a href="/online_store/view/user/login.php" title="Account"><i class="fa-regular fa-user"></i></a>
-            <a href="/online_store/view/cart.php" title="Cart"><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>
+<a href="/online_store/view/index.php" class="brand">NOIRE ESSENCE</a>
+<div class="nav-links">
+    <a href="/online_store/view/products.php">Vintage Collections</a>
+    <a href="/online_store/view/order.php">Orders</a>
+    <a href="/online_store/view/comments.php">Comments</a>
+    <a href="/online_store/view/story.php">Our Story</a>
+</div>
+<div class="nav-icons">
+    <a href="/online_store/view/wishlist.php" title="Wishlist"><i class="fa-regular fa-heart"></i></a>
+    <a href="/online_store/view/login.php" title="Account"><i class="fa-regular fa-user"></i></a>
+    <a href="/online_store/view/cart.php" title="Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+</div>
     </div>
 </div>
-

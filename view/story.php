@@ -1,11 +1,4 @@
-<?php
-require_once __DIR__ . '/../app/core/Database.php';
-require_once __DIR__ . '/../app/controllers/ProductController.php';
 
-$database = new Database();
-$db = $database->getConnection();
-$controller = new ProductController($db);
-?>
 
 <?php include __DIR__ . '/header.php'; ?>
 
@@ -461,7 +454,7 @@ $controller = new ProductController($db);
 <div class="cta-section">
     <h2>Experience the Noire Essence Difference</h2>
     <p>Discover our collection of handcrafted fragrances that tell your unique story.</p>
-    <a href="/online_store/view/product.php" class="cta-button">Explore Our Collection</a>
+    <a href="/online_store/view/products.php" class="cta-button">Explore Our Collection</a>
 </div>
 
 <script>

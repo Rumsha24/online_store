@@ -90,6 +90,14 @@ CREATE TABLE `orders` (
   `totalAmount` decimal(10,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`orderID`, `userID`, `orderDate`, `totalAmount`) VALUES
+(1, 1, '2025-06-12 09:28:00', 198.00),
+(2, 2, '2025-06-12 09:28:00', 240.00);
+
 -- --------------------------------------------------------
 
 --

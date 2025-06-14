@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['confirm_purchase'])) 
         $db->commit();
 
         // Redirect to success page
-        header("Location: totalbill.php?order_id=" . $orderId);
+        header("Location: order_success.php?order_id=" . $orderId);
         exit;
 
     } catch (Exception $e) {

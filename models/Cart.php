@@ -7,6 +7,12 @@ class Cart {
         $this->conn = $db;
     }
 
+       public function clearUserCart($userId) {
+        $query = "DELETE FROM cart WHERE userID = :userID";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':userID', $userId);
+        return $stmt->execute();
+    }
     public function addToCart($userId, $productId, $quantity) {
         try {
             // Check if product already in cart for user

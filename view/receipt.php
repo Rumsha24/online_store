@@ -87,9 +87,13 @@ $orderItems = $itemsStmt->fetchAll();
             text-decoration: none;
             border-radius: 6px;
             display: inline-block;
+            margin-top: 10px;
         }
         .btn:hover {
             background-color: #553c9a;
+        }
+        .download-btn {
+            margin-left: 15px;
         }
     </style>
 </head>
@@ -113,7 +117,7 @@ $orderItems = $itemsStmt->fetchAll();
         <tbody>
             <?php foreach ($orderItems as $item): ?>
                 <tr>
-                    <td><img src="<?= htmlspecialchars($item['image']) ?>" alt="Product"></td>
+                    <td><img src="<?= htmlspecialchars($item['image']) ?>" alt="Product Image"></td>
                     <td><?= htmlspecialchars($item['description']) ?></td>
                     <td>$<?= number_format($item['price'], 2) ?></td>
                     <td><?= $item['quantity'] ?></td>
@@ -126,6 +130,7 @@ $orderItems = $itemsStmt->fetchAll();
             </tr>
         </tbody>
     </table>
+
     <a href="/online_store/view/index.php" class="btn">Back to Home</a>
 </div>
 

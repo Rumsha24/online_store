@@ -99,111 +99,112 @@ unset($item); // break reference
     <meta charset="UTF-8" />
     <title>Your Cart</title>
     <style>
-        body {
-            background: #fff;
-            color: #333;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .cart-container {
-            max-width: 1100px;
-            margin: 40px auto;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-            padding: 30px 24px 40px 24px;
-        }
-        h1 {
-            color: #6B46C1;
-            text-align: center;
-            margin-bottom: 32px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 24px;
-        }
-        th, td {
-            padding: 14px 10px;
-            border-bottom: 1px solid #eaeaea;
-            text-align: center;
-        }
-        th {
-            background: #f8f9fa;
-            color: #6B46C1;
-            font-weight: 600;
-        }
-        img {
-            width: 70px;
-            height: 90px;
-            object-fit: contain;
-            border-radius: 6px;
-            border: 1px solid #eaeaea;
-            background: #fff;
-        }
-        input[type="number"] {
-            width: 60px;
-            padding: 7px;
-            border-radius: 4px;
-            border: 1px solid #eaeaea;
-            background: #fff;
-            color: #333;
-        }
-        button {
-            background: #6B46C1;
-            color: #fff;
-            border: none;
-            padding: 7px 14px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            margin-left: 4px;
-        }
-        button:hover {
-            background: #553C9A;
-        }
-        .total-row {
-            font-size: 1.1em;
-            font-weight: bold;
-            color: #6B46C1;
-            background: #f8f9fa;
-        }
-        .checkout-btn {
-            background: #FFC300;
-            color: #333;
-            padding: 12px 24px;
-            font-size: 1.1em;
-            margin-top: 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-block;
-        }
-        .checkout-btn:hover {
-            background: #E6B000;
-        }
-        .login-prompt {
-            background: #f8f9fa;
-            padding: 18px;
-            border-radius: 8px;
-            margin: 20px 0;
-            text-align: center;
-            border: 1px solid #eaeaea;
-        }
-        .empty-cart {
-            text-align: center;
-            padding: 40px 0;
-            color: #666;
-        }
-        .empty-cart a {
-            color: #6B46C1;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        .empty-cart a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    body {
+        background: #fff;
+        color: #590d22;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .cart-container {
+        max-width: 1100px;
+        margin: 40px auto;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(89, 13, 34, 0.07);
+        padding: 30px 24px 40px 24px;
+        border: 1px solid #ffccd5;
+    }
+    h1 {
+        color: #800f2f;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 24px;
+    }
+    th, td {
+        padding: 14px 10px;
+        border-bottom: 1px solid #ffccd5;
+        text-align: center;
+    }
+    th {
+        background: #fff0f3;
+        color: #800f2f;
+        font-weight: 600;
+    }
+    img {
+        width: 70px;
+        height: 90px;
+        object-fit: contain;
+        border-radius: 6px;
+        border: 1px solid #ffb3c1;
+        background: #fff;
+    }
+    input[type="number"] {
+        width: 60px;
+        padding: 7px;
+        border-radius: 4px;
+        border: 1px solid #ffb3c1;
+        background: #fff0f3;
+        color: #590d22;
+    }
+    button {
+        background: #c9184a;
+        color: #fff;
+        border: none;
+        padding: 7px 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        margin-left: 4px;
+    }
+    button:hover {
+        background: #a4133c;
+    }
+    .total-row {
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #800f2f;
+        background: #fff0f3;
+    }
+    .checkout-btn {
+        background: #ff4d6d;
+        color: #fff;
+        padding: 12px 24px;
+        font-size: 1.1em;
+        margin-top: 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+    }
+    .checkout-btn:hover {
+        background: #c9184a;
+    }
+    .login-prompt {
+        background: #fff0f3;
+        padding: 18px;
+        border-radius: 8px;
+        margin: 20px 0;
+        text-align: center;
+        border: 1px solid #ffb3c1;
+    }
+    .empty-cart {
+        text-align: center;
+        padding: 40px 0;
+        color: #800f2f;
+    }
+    .empty-cart a {
+        color: #c9184a;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    .empty-cart a:hover {
+        text-decoration: underline;
+    }
+</style>
 </head>
 <body>
 <?php include __DIR__ . '/header.php'; ?>

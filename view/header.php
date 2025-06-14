@@ -110,7 +110,7 @@
 <a href="/online_store/view/index.php" class="brand">NOIRE ESSENCE</a>
 <div class="nav-links">
     <a href="/online_store/view/products.php">Vintage Collections</a>
-    <a href="/online_store/view/orders.php">Orders</a>
+    <a href="/online_store/view/order.php">Orders</a>
     <a href="/online_store/view/comments.php">Comments</a>
     <a href="/online_store/view/story.php">Our Story</a>
 </div>

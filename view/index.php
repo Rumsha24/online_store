@@ -840,7 +840,13 @@ endif; ?>
     </div>
 </div>
 <div style="text-align:center; margin-bottom:32px;">
-    <button style="background:#c9184a; color:#fff0f3; border:none; padding:10px 32px; border-radius:6px; font-weight:bold; letter-spacing:1px; cursor:pointer; box-shadow:0 2px 8px #ffb3c1;">VIEW ALL BRANDS</button>
+    <a href="brands.php" style="display:inline-block; text-decoration:none;">
+        <button style="background:#c9184a; color:#fff0f3; border:none; padding:10px 32px; border-radius:6px; font-weight:bold; letter-spacing:1px; cursor:pointer; box-shadow:0 2px 8px #ffb3c1; transition:all 0.3s ease;"
+                onmouseover="this.style.background='#a4133c'; this.style.boxShadow='0 4px 12px #ff8fa3'"
+                onmouseout="this.style.background='#c9184a'; this.style.boxShadow='0 2px 8px #ffb3c1'">
+            VIEW ALL BRANDS
+        </button>
+    </a>
 </div>
 
     <h2 id="productsTitle">Customer Favorites</h2>

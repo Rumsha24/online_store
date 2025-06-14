@@ -61,35 +61,38 @@ include 'header.php';
         max-width: 1400px;
         margin: 0 auto;
         padding: 20px;
+        background: #fff0f3;
     }
 
     .products-grid {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 15px;
-        margin-top: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
     }
 
     .product-card {
         background: white;
         border-radius: 12px;
         padding: 15px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        box-shadow: 0 4px 12px rgba(89, 13, 34, 0.08);
         text-align: center;
-        transition: transform 0.2s;
+        transition: all 0.3s ease;
         cursor: pointer;
         text-decoration: none;
         color: inherit;
         position: relative;
+        border: 1px solid #ffccd5;
     }
 
     .product-card:hover {
         transform: translateY(-5px);
+        box-shadow: 0 6px 16px rgba(89, 13, 34, 0.12);
     }
 
     .product-card.selected {
-        border: 2px solid #6B46C1;
-        background: #f8f5ff;
+        border: 2px solid #c9184a;
+        background: #fff0f3;
     }
 
     .selected-label {
@@ -97,72 +100,91 @@ include 'header.php';
         top: -10px;
         left: 50%;
         transform: translateX(-50%);
-        background: #6B46C1;
+        background: #c9184a;
         color: white;
         padding: 4px 12px;
         border-radius: 12px;
         font-size: 0.8em;
         font-weight: 500;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 8px rgba(201, 24, 74, 0.2);
     }
 
     .product-card img {
-        width: 120px;
-        height: 160px;
-        object-fit: cover;
+        width: 100%;
+        height: 180px;
+        object-fit: contain;
         border-radius: 8px;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
+        padding: 10px;
+        background: #fff0f3;
     }
 
     .product-card h3 {
-        color: #333;
-        margin: 0 0 8px 0;
-        font-size: 0.9em;
-        line-height: 1.3;
-        height: 2.6em;
+        color: #590d22;
+        margin: 0 0 10px 0;
+        font-size: 0.95em;
+        line-height: 1.4;
+        height: 2.8em;
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
+        font-weight: 600;
     }
 
     .rating {
         color: #ffc107;
         font-size: 1.1em;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
     }
 
     .rating span {
-        color: #666;
-        font-size: 0.8em;
+        color: #800f2f;
+        font-size: 0.85em;
         margin-left: 5px;
     }
 
     .page-title {
-        color: #6B46C1;
+        color: #800f2f;
         text-align: center;
         margin-bottom: 30px;
+        font-size: 2.2em;
+        position: relative;
+        padding-bottom: 15px;
+    }
+
+    .page-title:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, #ff4d6d, #c9184a);
+        border-radius: 4px;
     }
 
     .review-section {
         margin-top: 40px;
-        padding-top: 20px;
-        border-top: 1px solid #eee;
+        padding-top: 30px;
+        border-top: 1px solid #ffb3c1;
     }
 
     .review-form {
         background: white;
         padding: 30px;
         border-radius: 12px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        box-shadow: 0 4px 16px rgba(89, 13, 34, 0.1);
         margin-bottom: 30px;
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
+        border: 1px solid #ffccd5;
     }
 
     .sign-in-prompt {
-        background: #f8f5ff;
+        background: #fff0f3;
         padding: 30px;
         border-radius: 12px;
         text-align: center;
@@ -170,38 +192,40 @@ include 'header.php';
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
+        border: 1px solid #ffb3c1;
     }
 
     .sign-in-prompt h3 {
-        color: #6B46C1;
+        color: #800f2f;
         margin: 0 0 15px 0;
         font-size: 1.5em;
     }
 
     .sign-in-prompt p {
-        color: #666;
+        color: #590d22;
         margin: 0 0 20px 0;
     }
 
     .sign-in-btn {
         display: inline-block;
-        background: #6B46C1;
+        background: linear-gradient(135deg, #ff4d6d, #c9184a);
         color: white;
         text-decoration: none;
-        padding: 10px 25px;
+        padding: 12px 28px;
         border-radius: 8px;
-        font-weight: 500;
-        transition: all 0.2s;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(201, 24, 74, 0.2);
     }
 
     .sign-in-btn:hover {
-        background: #553C9A;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(107, 70, 193, 0.2);
+        background: linear-gradient(135deg, #c9184a, #a4133c);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(201, 24, 74, 0.3);
     }
 
     .review-form h3 {
-        color: #333;
+        color: #590d22;
         margin: 0 0 25px 0;
         font-size: 1.5em;
         text-align: center;
@@ -217,7 +241,7 @@ include 'header.php';
         transform: translateX(-50%);
         width: 60px;
         height: 3px;
-        background: #6B46C1;
+        background: linear-gradient(90deg, #ff4d6d, #c9184a);
         border-radius: 2px;
     }
 
@@ -228,7 +252,7 @@ include 'header.php';
     .form-group label {
         display: block;
         margin-bottom: 10px;
-        color: #333;
+        color: #590d22;
         font-weight: 500;
         font-size: 1.1em;
     }
@@ -247,7 +271,7 @@ include 'header.php';
 
     .rating-input label {
         font-size: 2.5em;
-        color: #ddd;
+        color: #ffb3c1;
         cursor: pointer;
         transition: all 0.2s;
         padding: 5px;
@@ -266,34 +290,38 @@ include 'header.php';
 
     textarea {
         width: 100%;
-        min-height: 120px;
+        min-height: 150px;
         padding: 15px;
-        border: 2px solid #eee;
+        border: 2px solid #ffb3c1;
         border-radius: 12px;
         resize: vertical;
         font-size: 1em;
-        line-height: 1.5;
-        transition: border-color 0.2s;
+        line-height: 1.6;
+        transition: all 0.3s ease;
+        background: #fff0f3;
     }
 
     textarea:focus {
         outline: none;
-        border-color: #6B46C1;
+        border-color: #ff4d6d;
+        background: white;
+        box-shadow: 0 0 0 3px rgba(255, 77, 109, 0.2);
     }
 
     .image-upload {
-        border: 2px dashed #ddd;
+        border: 2px dashed #ffb3c1;
         border-radius: 12px;
-        padding: 20px;
+        padding: 25px;
         text-align: center;
         cursor: pointer;
-        transition: all 0.2s;
+        transition: all 0.3s ease;
         position: relative;
+        background: #fff0f3;
     }
 
     .image-upload:hover {
-        border-color: #6B46C1;
-        background: #f8f5ff;
+        border-color: #ff4d6d;
+        background: white;
     }
 
     .image-upload input[type="file"] {
@@ -303,12 +331,12 @@ include 'header.php';
     .image-upload label {
         display: block;
         cursor: pointer;
-        color: #666;
+        color: #800f2f;
     }
 
     .image-upload i {
         font-size: 2em;
-        color: #6B46C1;
+        color: #ff4d6d;
         margin-bottom: 10px;
     }
 
@@ -318,59 +346,63 @@ include 'header.php';
     }
 
     .image-preview img {
-        max-width: 200px;
-        max-height: 200px;
+        max-width: 100%;
+        max-height: 300px;
         border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 12px rgba(89, 13, 34, 0.1);
     }
 
     .remove-image {
         display: inline-block;
         margin-top: 10px;
-        color: #dc3545;
+        color: #ff4d6d;
         cursor: pointer;
         font-size: 0.9em;
-        text-decoration: underline;
+        font-weight: 500;
+        transition: all 0.2s ease;
     }
 
     .remove-image:hover {
-        color: #c82333;
+        color: #c9184a;
+        text-decoration: underline;
     }
 
     .submit-btn {
-        background: #6B46C1;
+        background: linear-gradient(135deg, #ff4d6d, #c9184a);
         color: white;
         border: none;
-        padding: 12px 30px;
+        padding: 14px 32px;
         border-radius: 8px;
         cursor: pointer;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 1.1em;
-        transition: all 0.2s;
+        transition: all 0.3s ease;
         display: block;
-        width: 200px;
+        width: 220px;
         margin: 30px auto 0;
         text-align: center;
+        box-shadow: 0 4px 12px rgba(201, 24, 74, 0.2);
     }
 
     .submit-btn:hover {
-        background: #553C9A;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(107, 70, 193, 0.2);
+        background: linear-gradient(135deg, #c9184a, #a4133c);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 16px rgba(201, 24, 74, 0.3);
     }
 
     .reviews-grid {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
     }
 
     .review-card {
         background: white;
         border-radius: 12px;
-        padding: 20px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        padding: 25px;
+        box-shadow: 0 4px 12px rgba(89, 13, 34, 0.08);
         transition: all 0.3s ease;
+        border: 1px solid #ffccd5;
     }
 
     .review-card.new-review {
@@ -379,7 +411,7 @@ include 'header.php';
 
     @keyframes highlightNew {
         0% {
-            background: #f8f5ff;
+            background: #fff0f3;
             transform: translateY(-10px);
             opacity: 0;
         }
@@ -398,9 +430,9 @@ include 'header.php';
     }
 
     .user-avatar {
-        width: 40px;
-        height: 40px;
-        background: #6B46C1;
+        width: 45px;
+        height: 45px;
+        background: linear-gradient(135deg, #ff4d6d, #c9184a);
         color: white;
         border-radius: 50%;
         display: flex;
@@ -416,28 +448,30 @@ include 'header.php';
 
     .reviewer-name {
         font-weight: bold;
-        color: #333;
+        color: #590d22;
         margin-bottom: 5px;
+        font-size: 1.1em;
     }
 
     .review-rating {
         color: #ffc107;
-        font-size: 1.1em;
-        margin-bottom: 5px;
+        font-size: 1.2em;
+        margin-bottom: 8px;
     }
 
     .review-text {
-        color: #666;
+        color: #590d22;
         margin: 0;
-        line-height: 1.5;
+        line-height: 1.6;
     }
 
     .review-image-container {
-        margin-top: 15px;
-        width: 200px;
-        height: 200px;
+        margin-top: 20px;
+        max-width: 300px;
+        max-height: 300px;
         border-radius: 8px;
         overflow: hidden;
+        box-shadow: 0 4px 12px rgba(89, 13, 34, 0.1);
     }
 
     .review-image {
@@ -451,23 +485,50 @@ include 'header.php';
         padding: 40px;
         background: white;
         border-radius: 12px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        box-shadow: 0 4px 12px rgba(89, 13, 34, 0.08);
+        border: 1px solid #ffccd5;
     }
 
     .no-reviews p {
-        color: #666;
+        color: #800f2f;
         margin: 0;
+        font-size: 1.1em;
     }
 
     @media (max-width: 1200px) {
         .products-grid {
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
         }
     }
 
     @media (max-width: 768px) {
         .products-grid {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        
+        .review-form, 
+        .sign-in-prompt {
+            padding: 20px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .products-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .page-title {
+            font-size: 1.8em;
+        }
+        
+        .review-header {
+            flex-direction: column;
+            align-items: flex-start;
         }
     }
 </style>

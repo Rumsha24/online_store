@@ -8,24 +8,56 @@ class OrderController
 {
     public function createOrder($request)
     {
-        // Logic to create an order
+        // Create and populate the order
         $order = new Order();
-        // Set order properties from request
-        // Save order to database
+        $order->userID = $request['userID'];
+        $order->orderDate = date('Y-m-d H:i:s'); // optional if using default timestamp
+        $order->totalAmount = $request['totalAmount'];
+        $order->save();
+
+        return [
+            'status' => 'success',
+            'orderID' => $order->orderID
+        ];
     }
 
     public function getOrder($orderId)
     {
-        // Logic to retrieve an order by ID
         $order = Order::find($orderId);
-        // Return order details
+
+        if (!$order) {
+            return ['status' => 'error', 'message' => 'Order not found'];
+        }
+
+        return $order;
     }
 
     public function cancelOrder($orderId)
     {
-        // Logic to cancel an order
         $order = Order::find($orderId);
-        // Update order status to canceled
-        // Save changes to database
+
+        if (!$order) {
+            return ['status' => 'error', 'message' => 'Order not found'];
+        }
+
+        // Assuming there's a status field in your orders table
+        $order->status = 'canceled'; // You may need to add this column
+        $order->save();
+
+        return ['status' => 'success', 'message' => 'Order canceled'];
     }
+
+
+    public function showUserOrders($userID)
+{
+    $db = new \App\Config\Database();
+    $conn = $db->connect();
+
+    $stmt = $conn->prepare("SELECT * FROM orders WHERE userID = ?");
+    $stmt->execute([$userID]);
+    $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    include 'views/order.php';
+}
+
 }

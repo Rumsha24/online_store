@@ -156,7 +156,7 @@ include __DIR__ . '/header.php';
         </div>
     <?php endif; ?>
 
-    <form action="/ecommerce-store/ecommerce-api/view/signup.php" method="POST">
+    <form action="/online_store/view/signup.php" method="POST">
         <div class="form-group">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" required>

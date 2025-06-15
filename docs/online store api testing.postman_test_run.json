@@ -1,0 +1,352 @@
+{
+	"id": "64a15946-0456-48a5-a5bb-80cd21bddfc3",
+	"name": "online store api testing",
+	"timestamp": "2025-06-14T17:42:15.136Z",
+	"collection_id": "45883394-e02bc750-fd36-4647-93ac-285021b3fa6e",
+	"folder_id": 0,
+	"environment_id": "45883394-e82f9675-1536-4366-91fa-f7bd660dfd89",
+	"totalPass": 31,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-06-14T17:42:13.847Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "67467160-5962-4e5b-9ff5-c1083409fa00",
+			"name": "Login",
+			"url": "http://localhost/online_store/api/login.php",
+			"time": 338,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response content type is application/json": true,
+				"Response has a success field that is true": true,
+				"Response time is reasonable": true,
+				"Response message is a string and not undefined": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response content type is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has a success field that is true": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is reasonable": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response message is a string and not undefined": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				338
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response content type is application/json": true,
+					"Response has a success field that is true": true,
+					"Response time is reasonable": true,
+					"Response message is a string and not undefined": true
+				}
+			]
+		},
+		{
+			"id": "7f65e80d-39d0-48d4-a63a-b3750cb5c95d",
+			"name": "View Cart",
+			"url": "http://localhost/online_store/api/view_cart.php",
+			"time": 17,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has a success field that is a boolean": true,
+				"Cart array is present and contains at least one item": true,
+				"Response time is less than 200ms": true,
+				"Response should contain required properties": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has a success field that is a boolean": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Cart array is present and contains at least one item": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should contain required properties": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has a success field that is a boolean": true,
+					"Cart array is present and contains at least one item": true,
+					"Response time is less than 200ms": true,
+					"Response should contain required properties": true
+				}
+			]
+		},
+		{
+			"id": "5c1c8472-c84a-4f99-b8b4-d27954e9580a",
+			"name": "Add to cart",
+			"url": "http://localhost/online_store/api/add_to_cart.php",
+			"time": 34,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Response has required fields": true,
+				"Success is a boolean value": true,
+				"Message is a string and can be empty": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Success is a boolean value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message is a string and can be empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				34
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Response has required fields": true,
+					"Success is a boolean value": true,
+					"Message is a string and can be empty": true
+				}
+			]
+		},
+		{
+			"id": "82d3db11-fd86-43f4-851e-902e27553bb0",
+			"name": "Remove from cart",
+			"url": "http://localhost/online_store/api/remove_from_cart.php",
+			"time": 32,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Response Content-Type is application/json": true,
+				"Response contains 'success' field and it is a boolean": true,
+				"Response contains 'message' field and it is a string": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response Content-Type is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'success' field and it is a boolean": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'message' field and it is a string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				32
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Response Content-Type is application/json": true,
+					"Response contains 'success' field and it is a boolean": true,
+					"Response contains 'message' field and it is a string": true
+				}
+			]
+		},
+		{
+			"id": "ffde2b8e-0ed0-4779-8af0-d9e6cfc2e435",
+			"name": "Update Cart",
+			"url": "http://localhost/online_store/api/update_cart.php",
+			"time": 30,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Response has the required fields": true,
+				"Validate the cart object structure and types": true,
+				"ProductID and Quantity are non-negative integers": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the cart object structure and types": {
+					"pass": 1,
+					"fail": 0
+				},
+				"ProductID and Quantity are non-negative integers": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				30
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Response has the required fields": true,
+					"Validate the cart object structure and types": true,
+					"ProductID and Quantity are non-negative integers": true
+				}
+			]
+		},
+		{
+			"id": "c99bd4a2-9d4e-456e-9ea1-c3cb6a754e89",
+			"name": "Product List",
+			"url": "http://localhost/online_store/api/products.php",
+			"time": 20,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Response has the required fields": true,
+				"Validate the product object schema": true,
+				"Price and Shipping Cost are in valid numeric format": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the product object schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Price and Shipping Cost are in valid numeric format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				20
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Response has the required fields": true,
+					"Validate the product object schema": true,
+					"Price and Shipping Cost are in valid numeric format": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 471,
+	"collection": {
+		"requests": [
+			{
+				"id": "67467160-5962-4e5b-9ff5-c1083409fa00",
+				"method": "POST"
+			},
+			{
+				"id": "7f65e80d-39d0-48d4-a63a-b3750cb5c95d",
+				"method": "GET"
+			},
+			{
+				"id": "5c1c8472-c84a-4f99-b8b4-d27954e9580a",
+				"method": "POST"
+			},
+			{
+				"id": "82d3db11-fd86-43f4-851e-902e27553bb0",
+				"method": "POST"
+			},
+			{
+				"id": "ffde2b8e-0ed0-4779-8af0-d9e6cfc2e435",
+				"method": "POST"
+			},
+			{
+				"id": "c99bd4a2-9d4e-456e-9ea1-c3cb6a754e89",
+				"method": "POST"
+			}
+		]
+	}
+}

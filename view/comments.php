@@ -548,7 +548,7 @@ include 'header.php';
         ?>
             <a href="?page=comments&id=<?= $p['productID'] ?>" class="product-card <?= $isSelected ? 'selected' : '' ?>">
                 <?php if ($isSelected): ?>
-                    <div class="selected-label">Selected Book</div>
+                    <div class="selected-label">Selected Perfume</div>
                 <?php endif; ?>
                 <img src="<?= htmlspecialchars($p['image']) ?>" alt="<?= htmlspecialchars($p['description']) ?>">
                 <h3><?= htmlspecialchars($p['description']) ?></h3>
@@ -564,10 +564,10 @@ include 'header.php';
         <div class="review-section">
             <?php if (isset($_SESSION['user_id'])): ?>
                 <div class="review-form">
-                    <h3>Write a Review</h3>
+                    <h3>Write a Comment</h3>
                     <form action="?page=comments&id=<?= $productId ?>" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label>How would you rate this book?</label>
+                            <label>How would you rate this perfume?</label>
                             <div class="rating-input">
                                 <?php for($i = 5; $i >= 1; $i--): ?>
                                     <input type="radio" name="rating" value="<?= $i ?>" id="star<?= $i ?>" required>
@@ -577,12 +577,12 @@ include 'header.php';
                         </div>
                         
                         <div class="form-group">
-                            <label for="text">Share your thoughts about this book</label>
+                            <label for="text">Share your thoughts about this perfume</label>
                             <textarea name="text" id="text" placeholder="Write your review here..." required></textarea>
                         </div>
                         
                         <div class="form-group">
-                            <label>Add a photo to your review (optional)</label>
+                            <label>Add a photo to your comment (optional)</label>
                             <div class="image-upload">
                                 <input type="file" name="image" id="image" accept="image/*" onchange="previewImage(this)">
                                 <label for="image">
@@ -603,7 +603,7 @@ include 'header.php';
             <?php else: ?>
                 <div class="sign-in-prompt">
                     <h3>Want to share your thoughts?</h3>
-                    <p>Sign in to write a review for this book.</p>
+                    <p>Sign in to write a comment for this book.</p>
                     <a href="signup.php" class="sign-in-btn">Sign In</a>
                 </div>
             <?php endif; ?>
@@ -611,7 +611,7 @@ include 'header.php';
             <div class="reviews-grid">
                 <?php if (empty($comments)): ?>
                     <div class="no-reviews">
-                        <p>No reviews yet. Be the first to review this book!</p>
+                        <p>No comments yet. Be the first to comment on this perfume!</p>
                     </div>
                 <?php else: ?>
                     <?php foreach ($comments as $index => $c): 
